@@ -1,4 +1,3 @@
-// Toggle visibility of sections when navigation links are clicked
 function toggleSection(sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
@@ -11,9 +10,9 @@ function toggleSection(sectionId) {
     }
 }
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scrolling for anchor links with additional visual effects
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent default anchor click behavior
 
         // Get the target section ID
@@ -26,6 +25,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         // Toggle section visibility
         toggleSection(targetId);
+
+        // Add visual effects (background color change + link rotation)
+        document.body.style.transition = "background-color 0.5s ease";
+        document.body.style.backgroundColor = "#4CAF50";
+
+        setTimeout(() => {
+            document.body.style.backgroundColor = "#333"; // Revert background color
+        }, 1000);
+
+        // Rotate the clicked link
+        this.style.transition = "transform 0.5s ease";
+        this.style.transform = "rotate(360deg)";
+
+        setTimeout(() => {
+            this.style.transform = "rotate(0deg)"; // Reset rotation
+        }, 500);
     });
 });
 
