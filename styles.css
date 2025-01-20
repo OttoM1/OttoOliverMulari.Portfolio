@@ -10,13 +10,13 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #ddd;
-    background-color: #222;
+    background-color: #333; /* Tummanharmaa tausta */
     padding: 0 20px;
 }
 
 /* Header */
 header {
-    background-color: #4CAF50;
+    background-color: #000; /* Musta yläosa */
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -45,14 +45,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #4CAF50;
+    color: #4CAF50; /* Vihreä linkkiväri */
     text-decoration: none;
     font-size: 1.2rem;
-    transition: transform 0.2s ease, color 0.2s ease; /* Uusi siirtymäefekti */
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-    transform: scale(1.2); /* Suurentaa linkkiä hieman hoverilla */
+    transform: scale(1.2); /* Suurentaa linkkiä hoverilla */
     color: #FFD700; /* Vaihtaa väriä keltaiseksi */
 }
 
@@ -60,20 +60,20 @@ nav ul li a:hover {
 section {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: #333;
+    background-color: #222; /* Tummanharmaa tausta osioille */
     color: white;
     border-radius: 8px;
 }
 
 section h2 {
-    color: #4CAF50;
+    color: #4CAF50; /* Vihreä otsikko väri */
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #222; /* Tummanharmaa tausta */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -81,6 +81,6 @@ footer {
 }
 
 footer p {
-    color: #4CAF50;
+    color: #4CAF50; /* Vihreä väri tekstissä */
     font-size: 0.9rem;
 }
