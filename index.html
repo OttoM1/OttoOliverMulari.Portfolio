@@ -1,31 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="BSRLT7GmiIky3QTYJJho8aAGPhHQf5sstBseP2azMfM" />
     <title>Otto Oliver Mulari - Software Developer Portfolio</title>
-    <meta name="description" content="Otto Oliver Mulari's portfolio showcasing web development, design, and creative projects. Explore my work, skills, and contact information for collaborations or freelance projects.">
-    <meta name="keywords" content="Otto Oliver Mulari, web developer, portfolio, front-end development, creative projects, freelance, web design, developer portfolio">
-    <meta name="author" content="Otto Oliver Mulari">
-    <meta name="robots" content="index, follow">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Otto Oliver Mulari",
-      "jobTitle": "Web Developer",
-      "url": "https://www.yoursite.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/otto-oliver-mulari-2a305b348",
-        "https://github.com/ottemulari"
-      ],
-      "description": "Otto Oliver Mulari's portfolio showcasing web development, design, and creative projects."
-    }
-    </script>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,45 +12,46 @@
         <p>Computer Science Student | University of Oulu</p>
         <nav>
             <ul>
-                <li><a href="javascript:void(0)" onclick="toggleSection('about-me')">About Me</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('skills')">⚙️ Skills</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('projects')">📂 Recent Projects</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('contact')">📞 Contact</a></li>
+                <li><a href="#about-me" aria-label="Navigate to About Me">About Me</a></li>
+                <li><a href="#skills" aria-label="Navigate to Skills">⚙️ Skills</a></li>
+                <li><a href="#projects" aria-label="Navigate to Projects">📂 Recent Projects</a></li>
+                <li><a href="#contact" aria-label="Navigate to Contact">📞 Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about-me" style="display:none;">
-        <h2>About Me</h2>
-        <p>21-year-old Computer Science student at the University of Oulu...</p>
-    </section>
+    <main class="container">
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>21-year-old Computer Science student at the University of Oulu...</p>
+        </section>
 
-    <section id="skills" style="display:none;">
-        <h2>⚙️ Skills</h2>
-        <ul>
-            <li>Programming Languages: Java, C, CSS, JS, HTML</li>
-            <li>Core Concepts: Algorithms & Problem Solving</li>
-            <li>Technical Strengths: Problem Solving, Adaptability</li>
-        </ul>
-    </section>
+        <section id="skills" style="display: none;">
+            <h2>⚙️ Skills</h2>
+            <ul>
+                <li>Programming Languages: Java, C, CSS, JS, HTML</li>
+                <li>Core Concepts: Algorithms & Problem Solving</li>
+                <li>Technical Strengths: Problem Solving, Adaptability</li>
+            </ul>
+        </section>
 
-    <section id="projects" style="display:none;">
-        <h2>📂 Recent Projects</h2>
-        <p>1. ATM Simulation (C)</p>
-        <p>2. Portfolio Website (HTML, CSS, JS)</p>
-    </section>
+        <section id="projects" style="display: none;">
+            <h2>📂 Recent Projects</h2>
+            <p>1. ATM Simulation (C)</p>
+            <p>2. Portfolio Website (HTML, CSS, JS)</p>
+        </section>
 
-    <section id="contact" style="display:none;">
-        <h2>📞 Contact</h2>
-        <p>Email: Otto.mularii@gmail.com</p>
-        <p>LinkedIn: www.linkedin.com/in/otto-oliver-mulari-2a305b348</p>
-    </section>
+        <section id="contact" style="display: none;">
+            <h2>📞 Contact</h2>
+            <p>Email: Otto.mularii@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/otto-oliver-mulari-2a305b348" target="_blank">Otto Oliver Mulari</a></p>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Otto Oliver Mulari</p>
     </footer>
 
-    <!-- Linkataan JavaScript tiedosto ennen body-tagia -->
     <script src="script.js"></script>
 </body>
 </html>
