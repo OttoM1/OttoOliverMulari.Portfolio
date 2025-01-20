@@ -1,0 +1,135 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: #333; /* Dark background */
+    padding-left: 20px;  /* Adds space to the left side */
+    padding-right: 20px; /* Adds space to the right side */
+}
+
+/* Container to center content */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+section {
+    padding: 2rem 0;
+    background-color: white;
+    margin-bottom: 1rem;
+    color: white; /* Ensure text color remains white */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Make all green-colored text 3 font sizes bigger */
+h3, .project h3, a {
+    font-size: 6rem; /* Increase font size to 6rem (3 sizes bigger) */
+    color: #4CAF50;
+}
+
+/* Increase font size and space for specific headings */
+h3 {
+    font-size: 6rem; /* 3 sizes bigger (previously 3rem) */
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+/* Adjust padding for paragraphs */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+}
+
+/* Skills and Projects Sections */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #444;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.project {
+    margin-bottom: 1.5rem;
+}
+
+.project h3 {
+    color: #4CAF50;
+    font-size: 6rem; /* 3 sizes bigger */
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Links */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 6rem; /* Increase font size to 6rem */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Adjust padding for headers that start with * */
+h3, h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h3 {
+    font-size: 6rem; /* 3 sizes bigger */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
