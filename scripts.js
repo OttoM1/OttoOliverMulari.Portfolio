@@ -1,7 +1,7 @@
 function toggleSection(sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
-        section.style.display = 'none'; // Hide all sections
+        section.style.display = 'none'; // Hide all section
     });
 
     const section = document.getElementById(sectionId);
