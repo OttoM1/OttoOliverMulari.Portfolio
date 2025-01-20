@@ -7,7 +7,7 @@
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif; /* Change font to Times New Roman */
     line-height: 1.6;
     color: #ddd;
     background-color: #333; /* Tummanharmaa tausta */
@@ -83,4 +83,14 @@ footer {
 footer p {
     color: #4CAF50; /* Vihreä väri tekstissä */
     font-size: 0.9rem;
+}
+
+/* Email in Green */
+footer a {
+    color: #4CAF50; /* Green color for the email link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFD700; /* Yellow color on hover */
 }
