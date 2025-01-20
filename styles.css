@@ -9,30 +9,21 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: white;
-    background-color: #333; /* Dark background */
-    padding-left: 20px;  /* Adds space to the left side */
-    padding-right: 20px; /* Adds space to the right side */
-}
-
-/* Container to center content */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    color: #ddd;
+    background-color: #222;
+    padding: 0 20px;
 }
 
 /* Header */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 2rem 0;
     text-align: center;
+    padding: 2rem 0;
 }
 
 header h1 {
-    font-size: 2.5rem; /* From the second CSS */
-    color: #4CAF50;
+    font-size: 2.5rem;
 }
 
 header p {
@@ -42,19 +33,21 @@ header p {
 
 /* Navigation */
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    text-align: center;
     padding: 0;
+    margin: 1rem 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: inline-block;
+    margin-right: 15px;
 }
 
 nav ul li a {
-    color: #4CAF50;
-    text-decoration: none;
+    color: white;
     font-size: 1.2rem;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -63,77 +56,17 @@ nav ul li a:hover {
 
 /* Section */
 section {
-    padding: 2rem 0;
-    background-color: white;
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #4CAF50;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: white; /* Ensure text color remains white */
-}
-
-h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-/* Text Elements (Headings and Links) */
-h3, .project h3, a {
-    font-size: 6rem; /* 3 sizes bigger */
-    color: #4CAF50;
-}
-
-/* Adjust padding for headings */
-h3 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
-    color: #4CAF50;
-}
-
-p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #ddd;
-    margin-bottom: 1.5rem;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* Skills and Projects Sections */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: #444;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.project {
-    margin-bottom: 1.5rem;
-}
-
-.project h3 {
-    color: #4CAF50;
-    font-size: 6rem; /* 3 sizes bigger */
-    margin-bottom: 0.5rem;
-}
-
-.project p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 6rem;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Footer */
@@ -141,15 +74,11 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
 
 footer p {
     color: #4CAF50;
-}
-
-/* Ensure spacing in the page */
-h3, h2 {
-    padding-left: 20px;
-    padding-right: 20px;
+    font-size: 0.9rem;
 }
