@@ -10,13 +10,13 @@ body {
     font-family: 'Times New Roman', Times, serif; /* Change font to Times New Roman */
     line-height: 1.6;
     color: #ddd;
-    background-color: #333; /* Tummanharmaa tausta */
+    background-color: #333; /* Dark gray background */
     padding: 0 20px;
 }
 
 /* Header */
 header {
-    background-color: #000; /* Musta yläosa */
+    background-color: #000; /* Black header */
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -45,35 +45,35 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #4CAF50; /* Vihreä linkkiväri */
+    color: #4CAF50; /* Green link color */
     text-decoration: none;
     font-size: 1.2rem;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-    transform: scale(1.2); /* Suurentaa linkkiä hoverilla */
-    color: #FFD700; /* Vaihtaa väriä keltaiseksi */
+    transform: scale(1.2); /* Scale link on hover */
+    color: #FFD700; /* Yellow color on hover */
 }
 
 /* Section */
 section {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: #222; /* Tummanharmaa tausta osioille */
+    background-color: #222; /* Dark gray background for sections */
     color: white;
     border-radius: 8px;
 }
 
 section h2 {
-    color: #4CAF50; /* Vihreä otsikko väri */
+    color: #4CAF50; /* Green heading color */
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #222; /* Tummanharmaa tausta */
+    background-color: #222; /* Dark gray background for footer */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -81,16 +81,21 @@ footer {
 }
 
 footer p {
-    color: #4CAF50; /* Vihreä väri tekstissä */
+    color: #4CAF50; /* Green footer text color */
     font-size: 0.9rem;
 }
 
-/* Email in Green */
-footer a {
-    color: #4CAF50; /* Green color for the email link */
-    text-decoration: none;
+/* Style the email link */
+.email-link {
+    color: green; /* Green color for email */
+    text-decoration: none; /* Remove underline */
 }
 
+.email-link:hover {
+    color: #FFD700; /* Change color to yellow when hovered */
+}
+
+/* Hover effect for links in the footer */
 footer a:hover {
     color: #FFD700; /* Yellow color on hover */
 }
