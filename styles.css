@@ -81,8 +81,13 @@ section {
     background-color: #222;
     color: white;
     border-radius: 8px;
-    visibility: hidden; /* Default to hidden */
+    display: none; /* Default to not visible */
     opacity: 0;         /* Initial opacity */
+}
+
+/* Show the section */
+section.visible {
+    display: block;  /* Make section visible */
 }
 
 /* Header of Section */
