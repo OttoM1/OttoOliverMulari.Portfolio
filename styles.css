@@ -60,38 +60,20 @@ nav ul li a:hover {
 /* Fade-In Animation */
 @keyframes fadeIn {
     0% {
+        visibility: hidden;
         opacity: 0;
         transform: translateY(30px);
     }
     100% {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Fade-Out Animation */
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(30px);
     }
 }
 
 /* Class for elements with fade-in effect */
 .fade-in {
-    animation: fadeIn 1s ease-out forwards;
-    visibility: visible;  /* Make sure the section is visible after animation */
-    opacity: 1;
-}
-
-/* Class for elements with fade-out effect */
-.fade-out {
-    animation: fadeOut 1s ease-out forwards;
-    opacity: 0;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Section */
@@ -101,13 +83,11 @@ section {
     background-color: #222;
     color: white;
     border-radius: 8px;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-    visibility: hidden; /* Sections start hidden by default */
-    pointer-events: none; /* Disable interaction while hidden */
+    visibility: hidden; /* Default to hidden */
+    opacity: 0;         /* Initial opacity */
+    animation: fadeIn 1s ease-out forwards;
 }
 
-/* Section Titles */
 section h2 {
     color: #4CAF50;
     font-size: 1.8rem;
@@ -138,15 +118,31 @@ footer p {
     color: #FFFFFF;
 }
 
-/* Section for Images (If applicable) */
+/* Hover effect for links in the footer */
+footer a:hover {
+    color: #FFFFFF;
+}
+
+/* Section for Images */
 section.images {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-/* Style for the images */
-section.images .image-1, section.images .image-2 {
+/* Style for the first image */
+section.images .image-1 {
+    background-image: url('images/IMG_2943.heic');
+    background-size: cover;
+    background-position: center;
+    width: 15vw;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+section.images .image-2 {
+    background-image: url('images/IMG_3161.jpg');
     background-size: cover;
     background-position: center;
     width: 15vw;
@@ -158,4 +154,9 @@ section.images .image-1, section.images .image-2 {
 section.images .image-1:hover,
 section.images .image-2:hover {
     transform: scale(1.1);
+}
+
+/* Zoom effect for images */
+.zoom {
+    transition: transform 0.3s ease;
 }
