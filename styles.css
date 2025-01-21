@@ -14,8 +14,6 @@ body {
 }
 
 /* Header */
-
-
 header {
     background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent grey */
     color: white;
@@ -23,10 +21,6 @@ header {
     padding: 2rem 0;
     animation: fadeIn 1s ease-out;
 }
-
-
-
-
 
 header h1 {
     font-size: 2.5rem;
@@ -211,4 +205,24 @@ html {
 /* Apply the visible class when the path is in the viewport */
 .signature.visible, .curvy-dash.visible {
     animation: drawPath 2s ease-out forwards;
+}
+
+/* Project Section Styles */
+.project {
+    margin-bottom: 20px; /* Adds space between each project section */
+}
+
+.project h3 {
+    font-size: 1.5em; /* Make the title a bit larger */
+    margin-bottom: 10px; /* Space between the title and the description */
+}
+
+.project .description {
+    margin-bottom: 10px; /* Adds space after description */
+    line-height: 1.6; /* Improves readability with more space between lines */
+}
+
+.project p {
+    font-size: 1em;
+    margin: 5px 0; /* Adds space between each paragraph */
 }
