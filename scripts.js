@@ -2,13 +2,13 @@ function toggleSection(sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.style.visibility = 'hidden';  // Hide all sections
-        section.classList.remove('fade-in'); // Remove fade-in animation class
+        section.classList.remove('fade-in-up'); // Remove fade-up animation class
     });
 
     const section = document.getElementById(sectionId);
     if (section) {
         section.style.visibility = 'visible';  // Show the selected section
-        section.classList.add('fade-in');      // Add fade-in animation class
+        section.classList.add('fade-in-up'); // Add fade-up animation class
     }
 }
 
