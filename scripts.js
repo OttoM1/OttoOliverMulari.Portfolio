@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Fade-in effect for sections
     const sections = document.querySelectorAll('section');
     const fadeInDuration = 800; // Duration for fade-in effect
 
