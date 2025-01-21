@@ -105,3 +105,11 @@ function customCursorTrail() {
         trail.style.top = `${e.pageY}px`;
     });
 }
+
+window.addEventListener('scroll', () => {
+    const path = document.querySelector('.animated-path');
+    const rect = path.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        path.style.animation = 'drawPath 2s ease-out forwards';
+    }
+});
