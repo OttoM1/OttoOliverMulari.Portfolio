@@ -29,7 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 */
 
-// Existing toggleSection function
 function toggleSection(sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
@@ -46,14 +45,15 @@ function toggleSection(sectionId) {
     }
 }
 
-// Show the "About Me" section by default
+// Show the "About Me" section by default and initialize animations
 document.addEventListener('DOMContentLoaded', () => {
     toggleSection('about-me');
     startMatrixEffect(); // Start falling binary animation
     customCursorTrail(); // Enable custom cursor trail
+    animateSVG(); // Start the SVG animation for "OM" on scroll
 });
 
-// Navigation smooth scrolling
+// Navigation smooth scrolling and section toggle
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -106,6 +106,27 @@ function customCursorTrail() {
     });
 }
 
+// Animate the SVG paths for "OM"
+function animateSVG() {
+    const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
+    signaturePaths.forEach(path => {
+        const rect = path.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            path.classList.add('visible');
+        }
+    });
+
+    window.addEventListener('scroll', () => {
+        signaturePaths.forEach(path => {
+            const rect = path.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                path.classList.add('visible');
+            }
+        });
+    });
+}
+
+// SVG Paths animation for drawing OM and curvy dash
 window.addEventListener('scroll', () => {
     const path = document.querySelector('.animated-path');
     const rect = path.getBoundingClientRect();
