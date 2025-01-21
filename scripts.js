@@ -29,6 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 */
 
+// Animate SVG Signature
 function animateSVG() {
     const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
 
@@ -99,9 +100,8 @@ function startMatrixEffect() {
     });
 }
 
-// Initialize all animations
+// Initialize All Animations
 document.addEventListener('DOMContentLoaded', () => {
-    toggleSection('about-me');
     startMatrixEffect();
     customCursorTrail();
     animateSVG();
