@@ -3,33 +3,30 @@ function toggleSection(sectionId) {
     
     // Hide all sections with fade-out animation
     sections.forEach(section => {
-        section.style.opacity = 0; // Start fading out
-        setTimeout(() => {
-            section.style.display = 'none'; // Hide the section after fade-out
-        }, 300); // 300ms should be enough to complete the fade-out
+        section.classList.remove('fade-in');  // Remove fade-in
+        section.classList.add('fade-out');    // Apply fade-out animation
+        section.style.visibility = 'hidden';  // Ensure sections are not interactive while fading out
     });
 
+    // Find and show the selected section with fade-in
     const section = document.getElementById(sectionId);
     if (section) {
-        section.style.display = 'block'; // Show the selected section
-        // Reset the section opacity and trigger the fade-in
-        section.style.opacity = 0; // Ensure opacity is reset
-        setTimeout(() => {
-            section.classList.add('fade-in'); // Add fade-in class to trigger animation
-            section.style.opacity = 1; // Apply opacity for fade-in
-        }, 50); // Small delay to trigger animation
+        section.style.visibility = 'visible';   // Ensure visibility when section is shown
+        section.classList.remove('fade-out');   // Remove fade-out class (if previously applied)
+        section.classList.add('fade-in');       // Apply fade-in animation
     }
 }
 
-// Show the "About Me" section by default
+// Show the "About Me" section by default when the page is loaded
 document.addEventListener('DOMContentLoaded', () => {
     toggleSection('about-me');
 });
 
+// Handle link click events for navigation
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default anchor click behavior
-        const targetId = this.getAttribute('href').substring(1);
-        toggleSection(targetId);
+        e.preventDefault();  // Prevent default anchor click behavior
+        const targetId = this.getAttribute('href').substring(1);  // Get section ID from link
+        toggleSection(targetId);  // Toggle the target section
     });
 });
