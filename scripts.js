@@ -46,32 +46,43 @@ function toggleSection(sectionId) {
 }
 
 // Falling Binary (Matrix Effect)
+// Falling Binary (Matrix Effect)
 function startMatrixEffect() {
-    const canvas = document.getElementById('matrixCanvas');
+    const canvas = document.createElement('canvas');
+    canvas.id = 'matrixCanvas';
+    document.body.appendChild(canvas);
+
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const letters = Array(256).fill(0);
+    const columns = Math.floor(canvas.width / 15); // Columns for binary digits
+    const drops = Array(columns).fill(0); // Tracks the Y-coordinate of each column
 
     function drawMatrix() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Background fade effect
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = '#0F0';
-        ctx.font = '15px monospace';
+        ctx.fillStyle = '#0F0'; // Binary color (green)
+        ctx.font = '15px monospace'; // Binary font style
 
-        letters.forEach((y, index) => {
-            const text = String.fromCharCode(0x30A0 + Math.random() * 96);
-            const x = index * 15;
+        drops.forEach((y, index) => {
+            const binaryDigit = Math.random() > 0.5 ? '1' : '0'; // Random 0 or 1
+            const x = index * 15; // X-coordinate for the column
 
-            ctx.fillText(text, x, y);
-            if (y > canvas.height || Math.random() > 0.95) letters[index] = 0;
-            else letters[index] = y + 15;
+            ctx.fillText(binaryDigit, x, y); // Draw binary digit at (x, y)
+
+            // Reset Y-coordinate or move it downward
+            if (y > canvas.height || Math.random() > 0.975) {
+                drops[index] = 0; // Reset to the top of the column
+            } else {
+                drops[index] = y + 15; // Move down by 15 pixels
+            }
         });
     }
 
-    setInterval(drawMatrix, 50);
+    setInterval(drawMatrix, 50); // Redraw the matrix every 50ms
+}
 
     // Update canvas size on window resize
     window.addEventListener('resize', () => {
