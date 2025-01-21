@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, fadeInDuration);
     });
 
-    // Binary Matrix Effect Canvas (remains unchanged from before)
+    // Binary Matrix Effect Canvas (modified to use 0's and 1's)
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight;
@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.font = "20px monospace";
 
         drops.forEach((y, x) => {
-            const text = Math.random() > 0.9 ? String.fromCharCode(Math.random() * 255) : " ";
+            // Change the text to '0' or '1' randomly
+            const text = Math.random() > 0.5 ? "1" : "0"; // Randomly choose between "1" and "0"
             ctx.fillText(text, x * 20, y * 20);
             if (y * 20 > canvas.height && Math.random() > 0.975) {
                 drops[x] = 0;
