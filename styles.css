@@ -1,168 +1,3 @@
-/*
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-/* body {
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 1.6;
-    color: #ddd;
-    background-color: #000;
-    padding: 0 20px;
-}
-
-/* Header */
-/*header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    animation: fadeIn 1s ease-out;
-}
-
-header h1 {
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-}
-
-/* Navigation */
-/*nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-nav ul li a:hover {
-    transform: scale(1.2);
-    color: #FFFFFF;
-}
-
-/* Fade-Up Animation */
-/*@keyframes fadeUp {
-    0% {
-        transform: translateY(50px); /* Start 50px below */
-  /*      opacity: 0;
-    }
-    100% {
-        transform: translateY(0);    /* End at normal position */
-   /*     opacity: 1;
-    }
-}
-
-/* Class for elements with fade-up effect */
-/*.fade-in-up {
-    animation: fadeUp 0.8s ease-out;
-}
-
-/* Section */
-/*section {
-    padding: 2rem;
-    margin: 1rem 0;
-    background-color: #222;
-    color: white;
-    border-radius: 8px;
-    display: none; /* Default to not visible */
-  /*  opacity: 0;         /* Initial opacity */
-/*}
-
-/* Show the section */
-/*section.visible {
-    display: block;  /* Make section visible */
-  /*  opacity: 1;      /* Ensure opacity is full */
-/*}
-
-/* Header of Section */
-/*section h2 {
-    color: #4CAF50;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-/* Footer */
-/*footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-footer p {
-    color: #4CAF50;
-    font-size: 0.9rem;
-}
-
-/* Style the email link */
-/*.email-link {
-    color: green;
-    text-decoration: none;
-}
-
-.email-link:hover {
-    color: #FFFFFF;
-}
-
-/* Hover effect for links in the footer */
-/* footer a:hover {
-    color: #FFFFFF;
-}
-JavaScript (scripts.js)
-
-function toggleSection(sectionId) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.remove('visible'); // Remove the visible class from all sections
-        section.classList.remove('fade-in-up'); // Remove fade-up animation class
-    });
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.classList.add('visible'); // Add the visible class to the selected section
-        setTimeout(() => {
-            section.classList.add('fade-in-up'); // Add fade-up animation after making it visible
-        }, 10);  // Slight delay to ensure the element is shown before animation starts
-    }
-} */
-/*
- // Show the "About Me" section by default
-document.addEventListener('DOMContentLoaded', () => {
-    toggleSection('about-me'); */
-/* });
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default anchor click behavior
-        const targetId = this.getAttribute('href').substring(1);
-        toggleSection(targetId);
-    });
-});
-*/
-
-
-
-
-
-
 
 * {
     margin: 0;
@@ -304,4 +139,46 @@ footer p {
 /* Hover effect for links in the footer */
 footer a:hover {
     color: #FFFFFF;
+}
+
+
+
+
+/* Falling Binary Canvas */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Custom Cursor Trail */
+#cursorTrail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #4CAF50, transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease-out;
+}
+
+/* Additional Navigation Hover Effect */
+nav ul li a:hover {
+    color: #FFFFFF;
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Parallax Background Effect */
+body {
+    background: linear-gradient(120deg, #000, #222);
+    overflow-x: hidden;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
 }
