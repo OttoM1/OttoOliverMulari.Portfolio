@@ -206,3 +206,12 @@ html {
 .signature.visible, .curvy-dash.visible {
     animation: drawPath 2s ease-out forwards;
 }
+
+
+.highlighted-text {
+    font-size: 1.8rem; /* Adjust as needed */
+    line-height: 2; /* Optional for readability */
+    margin-top: 1rem; /* Optional for spacing */
+    color: #FFFFFF; /* Ensure consistent color */
+}
+
