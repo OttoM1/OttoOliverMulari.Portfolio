@@ -1,12 +1,12 @@
-/* 
-
+/*
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+/* Body */
+/* body {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #ddd;
@@ -14,7 +14,8 @@ body {
     padding: 0 20px;
 }
 
-header {
+/* Header */
+/*header {
     background-color: #333;
     color: white;
     text-align: center;
@@ -31,7 +32,8 @@ header p {
     margin-top: 0.5rem;
 }
 
-nav ul {
+/* Navigation */
+/*nav ul {
     list-style: none;
     text-align: center;
     padding: 0;
@@ -55,43 +57,49 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-@keyframes fadeUp {
+/* Fade-Up Animation */
+/*@keyframes fadeUp {
     0% {
-        transform: translateY(50px); 
-        opacity: 0;
+        transform: translateY(50px); /* Start 50px below */
+  /*      opacity: 0;
     }
     100% {
-        transform: translateY(0);   
-        opacity: 1;
+        transform: translateY(0);    /* End at normal position */
+   /*     opacity: 1;
     }
 }
 
-.fade-in-up {
+/* Class for elements with fade-up effect */
+/*.fade-in-up {
     animation: fadeUp 0.8s ease-out;
 }
 
-section {
+/* Section */
+/*section {
     padding: 2rem;
     margin: 1rem 0;
     background-color: #222;
     color: white;
     border-radius: 8px;
-    display: none; 
-    opacity: 0;        
-}
+    display: none; /* Default to not visible */
+  /*  opacity: 0;         /* Initial opacity */
+/*}
 
-section.visible {
-    display: block;  
-    opacity: 1;      
-}
+/* Show the section */
+/*section.visible {
+    display: block;  /* Make section visible */
+  /*  opacity: 1;      /* Ensure opacity is full */
+/*}
 
-section h2 {
+/* Header of Section */
+/*section h2 {
     color: #4CAF50;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-footer {
+/* Footer */
+/*footer {
     background-color: #222;
     color: white;
     text-align: center;
@@ -104,7 +112,8 @@ footer p {
     font-size: 0.9rem;
 }
 
-.email-link {
+/* Style the email link */
+/*.email-link {
     color: green;
     text-decoration: none;
 }
@@ -113,12 +122,48 @@ footer p {
     color: #FFFFFF;
 }
 
-footer a:hover {
+/* Hover effect for links in the footer */
+/* footer a:hover {
     color: #FFFFFF;
 }
+JavaScript (scripts.js)
+
+function toggleSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.remove('visible'); // Remove the visible class from all sections
+        section.classList.remove('fade-in-up'); // Remove fade-up animation class
+    });
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.classList.add('visible'); // Add the visible class to the selected section
+        setTimeout(() => {
+            section.classList.add('fade-in-up'); // Add fade-up animation after making it visible
+        }, 10);  // Slight delay to ensure the element is shown before animation starts
+    }
+} */
+/*
+ // Show the "About Me" section by default
+document.addEventListener('DOMContentLoaded', () => {
+    toggleSection('about-me'); */
+/* });
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor click behavior
+        const targetId = this.getAttribute('href').substring(1);
+        toggleSection(targetId);
+    });
+});
 */
 
-/* Global Styles */
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -177,8 +222,20 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-/* Fade-Up Animation */
+/* Fade-Up Animation with Vendor Prefixes */
 @keyframes fadeUp {
+    0% {
+        transform: translateY(50px); /* Start 50px below */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);    /* End at normal position */
+        opacity: 1;
+    }
+}
+
+/* Vendor Prefixes for Safari and older browsers */
+@-webkit-keyframes fadeUp { /* For Safari & older WebKit browsers */
     0% {
         transform: translateY(50px); /* Start 50px below */
         opacity: 0;
@@ -192,6 +249,8 @@ nav ul li a:hover {
 /* Class for elements with fade-up effect */
 .fade-in-up {
     animation: fadeUp 0.8s ease-out;
+    -webkit-animation: fadeUp 0.8s ease-out;  /* Safari support */
+    will-change: transform, opacity; /* Performance optimization */
 }
 
 /* Section */
@@ -202,7 +261,7 @@ section {
     color: white;
     border-radius: 8px;
     display: none; /* Default to not visible */
-    opacity: 0;         /* Initial opacity */
+    opacity: 0;    /* Initial opacity */
 }
 
 /* Show the section */
@@ -246,33 +305,3 @@ footer p {
 footer a:hover {
     color: #FFFFFF;
 }
-JavaScript (scripts.js)
-
-function toggleSection(sectionId) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.remove('visible'); // Remove the visible class from all sections
-        section.classList.remove('fade-in-up'); // Remove fade-up animation class
-    });
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.classList.add('visible'); // Add the visible class to the selected section
-        setTimeout(() => {
-            section.classList.add('fade-in-up'); // Add fade-up animation after making it visible
-        }, 10);  // Slight delay to ensure the element is shown before animation starts
-    }
-}
-
-// Show the "About Me" section by default
-document.addEventListener('DOMContentLoaded', () => {
-    toggleSection('about-me');
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default anchor click behavior
-        const targetId = this.getAttribute('href').substring(1);
-        toggleSection(targetId);
-    });
-});
