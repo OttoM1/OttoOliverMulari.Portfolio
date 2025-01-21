@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const columns = canvas.width / 20; // Determine number of columns
     const drops = Array.from({ length: columns }).map(() => 0); // Initialize drop positions
 
+    const dropSpeed = 0.5;  // Speed factor for falling symbols (lower value = slower)
+
     function draw() {
         ctx.fillStyle = "rgba(0, 0, 0, 0.04)"; // Background fade effect
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -31,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const text = characters[Math.floor(Math.random() * characters.length)]; // Random character
             ctx.fillText(text, x * 20, y * 20); // Draw the character
 
-            // Reset drop to the top if it goes past the bottom
+            // Slow down the fall of the characters
             if (y * 20 > canvas.height && Math.random() > 0.975) {
-                drops[x] = 0;
+                drops[x] = 0;  // Reset the drop to the top when it goes off screen
             }
-            drops[x]++; // Move the drop down
+            drops[x] += dropSpeed;  // Increment y position with slower speed factor
         });
     }
 
