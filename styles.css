@@ -1,21 +1,20 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* Body Styling */
 body {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #ddd;
-    background-color: #000;
+    background: linear-gradient(120deg, #000, #222);
     padding: 0 20px;
-    overflow-x: hidden; /* To prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Header */
+/* Header Styling */
 header {
     background-color: rgba(30, 30, 30, 0.8);
     color: white;
@@ -33,7 +32,7 @@ header p {
     margin-top: 0.5rem;
 }
 
-/* Navigation */
+/* Navigation Styling */
 nav ul {
     list-style: none;
     text-align: center;
@@ -58,7 +57,7 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-/* Fade-Up Animation with Vendor Prefixes */
+/* Fade-Up Animation */
 @keyframes fadeUp {
     0% {
         transform: translateY(50px);
@@ -70,13 +69,11 @@ nav ul li a:hover {
     }
 }
 
-/* Class for elements with fade-up effect */
 .fade-in-up {
     animation: fadeUp 0.8s ease-out;
-    will-change: transform, opacity;
 }
 
-/* Section */
+/* Section Styling */
 section {
     padding: 2rem;
     margin: 1rem 0;
@@ -92,14 +89,14 @@ section.visible {
     opacity: 1;
 }
 
-/* Header of Section */
+/* Section Headers */
 section h2 {
     color: #4CAF50;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background-color: rgba(34, 34, 34, 0.8);
     color: white;
@@ -119,16 +116,11 @@ footer {
 }
 
 .email-link:hover {
-    color: #4CAF50; /* Green color on hover */
-    transform: scale(1.1); /* Slight scale effect */
+    color: #4CAF50;
+    transform: scale(1.1);
 }
 
-/* Hover effect for links in the footer */
-footer a:hover {
-    color: #FFFFFF;
-}
-
-/* Falling Binary Canvas */
+/* Binary Canvas Styling */
 #matrixCanvas {
     position: fixed;
     top: 0;
@@ -138,7 +130,7 @@ footer a:hover {
     opacity: 0.8;
 }
 
-/* Custom Cursor Trail */
+/* Custom Cursor Styling */
 #cursorTrail {
     position: absolute;
     width: 10px;
@@ -150,14 +142,13 @@ footer a:hover {
     transition: transform 0.1s ease-out;
 }
 
-/* Signature SVG Animation */
+/* Signature Animation */
 .signature, .curvy-dash {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     transition: stroke-dashoffset 2s ease-out;
 }
 
-/* Add animation for path drawing */
 .signature.visible, .curvy-dash.visible {
     animation: drawPath 2s ease-out forwards;
 }
@@ -171,21 +162,9 @@ footer a:hover {
     }
 }
 
-/* Smooth Scroll Behavior */
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
-}
-
-/* Parallax Background Effect */
-body {
-    background: linear-gradient(120deg, #000, #222);
-    overflow-x: hidden;
-}
-
-/* Page-wide Hover Effect */
-nav ul li a:hover {
-    color: #FFFFFF;
-    transform: scale(1.2) rotate(5deg);
 }
 
 /* Signature Section */
@@ -202,7 +181,7 @@ nav ul li a:hover {
     opacity: 1;
 }
 
-/* Project Section Styles */
+/* Project Section */
 .project {
     margin-bottom: 20px;
 }
@@ -217,7 +196,25 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-.project p {
-    font-size: 1em;
-    margin: 5px 0;
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
 }
