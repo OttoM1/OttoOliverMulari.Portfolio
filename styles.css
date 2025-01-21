@@ -7,19 +7,20 @@
 
 /* Body */
 body {
-    font-family: 'Times New Roman', Times, serif; /* Change font to Times New Roman */
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #ddd;
-    background-color: #000; /* Dark gray background */
+    background-color: #000;
     padding: 0 20px;
 }
 
 /* Header */
 header {
-    background-color: #333; /* Black header */
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 2rem 0;
+    animation: fadeIn 1s ease-out;
 }
 
 header h1 {
@@ -45,35 +46,54 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #4CAF50; /* Green link color */
+    color: #4CAF50;
     text-decoration: none;
     font-size: 1.2rem;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-    transform: scale(1.2); /* Scale link on hover */
-    color: #FFFFFF; /* Yellow color on hover */
+    transform: scale(1.2);
+    color: #FFFFFF;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Class for elements with fade-in effect */
+.fade-in {
+    animation: fadeIn 1s ease-out;
 }
 
 /* Section */
 section {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: #222; /* Dark gray background for sections */
+    background-color: #222;
     color: white;
     border-radius: 8px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 section h2 {
-    color: #4CAF50; /* Green heading color */
+    color: #4CAF50;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #222; /* Dark gray background for footer */
+    background-color: #222;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -81,25 +101,24 @@ footer {
 }
 
 footer p {
-    color: #4CAF50; /* Green footer text color */
+    color: #4CAF50;
     font-size: 0.9rem;
 }
 
 /* Style the email link */
 .email-link {
-    color: green; /* Green color for email */
-    text-decoration: none; /* Remove underline */
+    color: green;
+    text-decoration: none;
 }
 
 .email-link:hover {
-    color: #FFFFFF; /* Change color to yellow when hovered */
+    color: #FFFFFF;
 }
 
 /* Hover effect for links in the footer */
 footer a:hover {
-    color: #FFFFFF; /* white color on hover */
+    color: #FFFFFF;
 }
-
 
 /* Section for Images */
 section.images {
@@ -113,17 +132,28 @@ section.images .image-1 {
     background-image: url('images/IMG_2943.heic');
     background-size: cover;
     background-position: center;
-    width: 15vw; /* Width set to 15% of viewport width */
-    height: 200px; /* Set a fixed height or adjust as needed */
-    border-radius: 8px; /* Optional: round the corners */
+    width: 15vw;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Style for the second image */
 section.images .image-2 {
     background-image: url('images/IMG_3161.jpg');
     background-size: cover;
     background-position: center;
-    width: 15vw; /* Width set to 15% of viewport width */
-    height: 200px; /* Set a fixed height or adjust as needed */
-    border-radius: 8px; /* Optional: round the corners */
+    width: 15vw;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+section.images .image-1:hover,
+section.images .image-2:hover {
+    transform: scale(1.1);
+}
+
+/* Zoom effect for images */
+.zoom {
+    transition: transform 0.3s ease;
 }
