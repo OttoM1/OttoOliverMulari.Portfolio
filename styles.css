@@ -15,19 +15,19 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(3, 3, 3, 0.7); /* Slightly transparent grey */
+    background-color: rgba(3, 3, 3, 0.7);
     color: white;
     text-align: center;
     padding: 2rem 0;
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 1.2s ease-out; /* Slower fade-in for the header */
 }
 
 header h1 {
-    font-size: 3.4rem; /* Increased by ~30% from 2.6rem */
+    font-size: 3.4rem; 
 }
 
 header p {
-    font-size: 1.8rem; /* Increased by ~30% from 1.4rem */
+    font-size: 1.8rem;
     margin-top: 0.5rem;
 }
 
@@ -47,87 +47,103 @@ nav ul li {
 nav ul li a {
     color: #4CAF50;
     text-decoration: none;
-    font-size: 2.34rem; /* Increased by ~30% from 1.8rem */
-    transition: transform 0.2s ease, color 0.2s ease;
+    font-size: 2.34rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    transform: scale(1.8);
+    transform: scale(1.6); /* Slightly slower scale */
     color: #FFFFFF;
 }
 
-/* Fade-Up Animation with Vendor Prefixes */
+/* Signature Animation - Smoother and Elegant */
+@keyframes floatSignature {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-5deg); /* Slow floating with slight rotation */
+    }
+    100% {
+        transform: translateY(0) rotate(5deg); /* Return to original position */
+    }
+}
+
+/* Signature path animation */
+.signature {
+    animation: floatSignature 5s ease-in-out infinite; /* Elegant float effect */
+}
+
+/* Fade-Up Animation */
 @keyframes fadeUp {
     0% {
-        transform: translateY(50px); /* Start 50px below */
+        transform: translateY(50px); 
         opacity: 0;
     }
     100% {
-        transform: translateY(0);    /* End at normal position */
+        transform: translateY(0); 
         opacity: 1;
     }
 }
 
-/* Vendor Prefixes for Safari and older browsers */
-@-webkit-keyframes fadeUp { /* For Safari & older WebKit browsers */
+/* Vendor Prefixes for Safari */
+@-webkit-keyframes fadeUp {
     0% {
-        transform: translateY(50px); /* Start 50px below */
+        transform: translateY(50px);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);    /* End at normal position */
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
 /* Class for elements with fade-up effect */
 .fade-in-up {
-    animation: fadeUp 0.8s ease-out;
-    -webkit-animation: fadeUp 0.8s ease-out;  /* Safari support */
-    will-change: transform, opacity; /* Performance optimization */
+    animation: fadeUp 1.2s ease-out; /* Slower fade-in for smooth effect */
+    -webkit-animation: fadeUp 1.2s ease-out;
+    will-change: transform, opacity;
 }
 
 /* Section */
 section {
-    padding: 2.6rem; /* Increased by ~30% from 2rem */
-    margin: 1.3rem 0; /* Increased by ~30% from 1rem */
-    background-color: rgba(6, 6, 6, 0.7); /* Semi-transparent grey */
+    padding: 2.6rem;
+    margin: 1.3rem 0;
+    background-color: rgba(6, 6, 6, 0.7);
     color: white;
     border-radius: 8px;
-    display: none; /* Default to not visible */
-    opacity: 0;    /* Initial opacity */
+    display: none;
+    opacity: 0;
 }
 
-/* Show the section */
 section.visible {
-    display: block;  /* Make section visible */
-    opacity: 1;      /* Ensure opacity is full */
+    display: block;
+    opacity: 1;
 }
 
 /* Header of Section */
 section h2 {
     color: #4CAF50;
-    font-size: 2.34rem; /* Increased by ~30% from 1.8rem */
-    margin-bottom: 1.3rem; /* Increased by ~30% from 1rem */
+    font-size: 2.34rem;
+    margin-bottom: 1.3rem;
 }
 
 /* Footer */
 footer {
-    background-color: rgba(6, 6, 6, 0.7); /* Semi-transparent grey */
+    background-color: rgba(6, 6, 6, 0.7);
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed; /* Fix footer at the bottom */
-    bottom: 0;       /* Position it at the very bottom */
-    width: 100%;     /* Make it span the full width of the screen */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
     color: #4CAF50;
-    font-size: 0.9rem; /* Unchanged */
+    font-size: 0.9rem;
 }
 
-/* Style the email link */
 .email-link {
     color: white;
     text-decoration: none;
@@ -135,11 +151,6 @@ footer p {
 
 .email-link:hover {
     color: ##50C878;
-}
-
-/* Hover effect for links in the footer */
-footer a:hover {
-    color: #FFFFFF;
 }
 
 /* Falling Binary Canvas */
