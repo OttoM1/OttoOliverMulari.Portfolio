@@ -60,11 +60,11 @@ nav ul li a:hover {
 /* Fade-Up Animation */
 @keyframes fadeUp {
     0% {
-        transform: translateY(50px);
+        transform: translateY(50px); /* Start 50px below */
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(0);    /* End at normal position */
         opacity: 1;
     }
 }
@@ -74,6 +74,14 @@ nav ul li a:hover {
     animation: fadeUp 0.8s ease-out;
 }
 
+/* Other styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #ddd;
+    background-color: #000;
+    padding: 0 20px;
+}
 /* Section */
 section {
     padding: 2rem;
