@@ -136,4 +136,4 @@ window.addEventListener('scroll', () => {
             path.style.animation = 'drawPath 2s ease-out forwards';
         }
     });
-}); 
+});
