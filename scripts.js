@@ -1,34 +1,26 @@
 function toggleSection(sectionId) {
     const sections = document.querySelectorAll('section');
-
-    // Hide all sections with fade-out animation
     sections.forEach(section => {
-        section.classList.remove('fade-in');  // Remove fade-in
-        section.classList.add('fade-out');    // Apply fade-out animation
-        
-        // Set a flag to make sure the section is not interactive during fade-out
-        section.style.pointerEvents = 'none';
+        section.style.visibility = 'hidden';  // Hide all sections
+        section.classList.remove('fade-in'); // Remove fade-in animation class
     });
 
-    // Find and show the selected section with fade-in
     const section = document.getElementById(sectionId);
     if (section) {
-        section.style.pointerEvents = 'auto';   // Ensure the section can be interacted with after fade-in
-        section.classList.remove('fade-out');   // Remove fade-out class (if previously applied)
-        section.classList.add('fade-in');       // Apply fade-in animation
+        section.style.visibility = 'visible';  // Show the selected section
+        section.classList.add('fade-in');      // Add fade-in animation class
     }
 }
 
-// Show the "About Me" section by default when the page is loaded
+// Show the "About Me" section by default
 document.addEventListener('DOMContentLoaded', () => {
     toggleSection('about-me');
 });
 
-// Handle link click events for navigation
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
-        e.preventDefault();  // Prevent default anchor click behavior
-        const targetId = this.getAttribute('href').substring(1);  // Get section ID from link
-        toggleSection(targetId);  // Toggle the target section
+        e.preventDefault(); // Prevent default anchor click behavior
+        const targetId = this.getAttribute('href').substring(1);
+        toggleSection(targetId);
     });
 });
