@@ -1,3 +1,4 @@
+// Smooth section visibility transition
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const fadeInDuration = 800; // Duration for fade-in effect
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, fadeInDuration);
     });
 
-    // Binary Matrix Effect Canvas (modified to use 0's and 1's)
+    // Binary Matrix Effect Canvas (remains unchanged from before)
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight;
@@ -26,8 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.font = "20px monospace";
 
         drops.forEach((y, x) => {
-            // Change the text to '0' or '1' randomly
-            const text = Math.random() > 0.5 ? "1" : "0"; // Randomly choose between "1" and "0"
+            const text = Math.random() > 0.9 ? String.fromCharCode(Math.random() * 255) : " ";
             ctx.fillText(text, x * 20, y * 20);
             if (y * 20 > canvas.height && Math.random() > 0.975) {
                 drops[x] = 0;
