@@ -30,65 +30,110 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 */
 
 // Three.js Scene Setup
-const canvas = document.getElementById('threejsCanvas');
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ canvas });
-renderer.setSize(window.innerWidth, window.innerHeight);
+function toggleSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.remove('visible');
+        section.classList.remove('fade-in-up');
+    });
 
-// Cube Creation
-const geometry = new THREE.BoxGeometry();
-const materials = [
-    new THREE.MeshBasicMaterial({ color: 0x4CAF50, map: createTextTexture('About Me') }),
-    new THREE.MeshBasicMaterial({ color: 0x4CAF50, map: createTextTexture('Skills') }),
-    new THREE.MeshBasicMaterial({ color: 0x4CAF50, map: createTextTexture('Projects') }),
-    new THREE.MeshBasicMaterial({ color: 0x4CAF50, map: createTextTexture('Contact') }),
-    new THREE.MeshBasicMaterial({ color: 0x111111 }), // Top face
-    new THREE.MeshBasicMaterial({ color: 0x111111 })  // Bottom face
-];
-const cube = new THREE.Mesh(geometry, materials);
-scene.add(cube);
-
-// Position Camera
-camera.position.z = 3;
-
-// Animation
-function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    renderer.render(scene, camera);
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.classList.add('visible');
+        setTimeout(() => {
+            section.classList.add('fade-in-up');
+        }, 10);
+    }
 }
-animate();
 
-// Create Textures for Cube Faces
-function createTextTexture(text) {
+// Show the "About Me" section by default and initialize animations
+document.addEventListener('DOMContentLoaded', () => {
+    toggleSection('about-me');
+    startMatrixEffect(); // Start falling binary animation
+    customCursorTrail(); // Enable custom cursor trail
+    animateSVG(); // Start the SVG animation for "OM" and curvy dash on scroll
+});
+
+// Navigation smooth scrolling and section toggle
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        toggleSection(targetId);
+    });
+});
+
+// Falling Binary (Matrix Effect)
+function startMatrixEffect() {
     const canvas = document.createElement('canvas');
-    canvas.width = 512;
-    canvas.height = 512;
+    canvas.id = 'matrixCanvas';
+    document.body.appendChild(canvas);
+
     const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#4CAF50';
-    ctx.font = 'Bold 48px Arial';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(text, canvas.width / 2, canvas.height / 2);
-    return new THREE.CanvasTexture(canvas);
-}
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-// Handle Clicks to Rotate Cube and Show Sections
-canvas.addEventListener('click', (event) => {
-    const x = event.clientX / window.innerWidth - 0.5;
-    const y = event.clientY / window.innerHeight - 0.5;
+    const letters = Array(256).fill(0);
 
-    if (x > 0) {
-        cube.rotation.y += Math.PI / 2;
-    } else {
-        cube.rotation.y -= Math.PI / 2;
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#0F0';
+        ctx.font = '15px monospace';
+
+        letters.forEach((y, index) => {
+            const text = String.fromCharCode(0x30A0 + Math.random() * 96);
+            const x = index * 15;
+
+            ctx.fillText(text, x, y);
+            if (y > canvas.height || Math.random() > 0.95) letters[index] = 0;
+            else letters[index] = y + 15;
+        });
     }
 
-    const sectionId = ['about-me', 'skills', 'projects', 'contact'][(Math.round(cube.rotation.y / (Math.PI / 2)) + 4) % 4];
-    document.querySelectorAll('main > section').forEach(sec => sec.style.display = 'none');
-    document.getElementById(sectionId).style.display = 'block';
-});
+    setInterval(drawMatrix, 50);
+}
+
+// Custom Cursor Trail Effect
+function customCursorTrail() {
+    const trail = document.createElement('div');
+    trail.id = 'cursorTrail';
+    document.body.appendChild(trail);
+
+    document.addEventListener('mousemove', (e) => {
+        trail.style.left = ${e.pageX}px;
+        trail.style.top = ${e.pageY}px;
+    });
+}
+
+// Animate the SVG paths for "OM" and the Curvy Dash
+function animateSVG() {
+    const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
+    signaturePaths.forEach(path => {
+        const rect = path.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            path.classList.add('visible');
+        }
+    });
+
+    window.addEventListener('scroll', () => {
+        signaturePaths.forEach(path => {
+            const rect = path.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                path.classList.add('visible');
+            }
+        });
+    });
+}
+
+// SVG Paths animation for drawing OM and curvy dash
+window.addEventListener('scroll', () => {
+    const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
+    signaturePaths.forEach(path => {
+        const rect = path.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            path.style.animation = 'drawPath 2s ease-out forwards';
+        }
+    });
+}); 
