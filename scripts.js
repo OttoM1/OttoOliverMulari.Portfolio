@@ -35,10 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     setInterval(draw, 50);
-
-    // Additional Floating Cursor Trail (remains unchanged)
-    let cursor = document.getElementById("cursorTrail");
-    document.addEventListener("mousemove", (e) => {
-        cursor.style.transform = `translate(${e.pageX - 5}px, ${e.pageY - 5}px)`;
-    });
 });
