@@ -1,14 +1,23 @@
 function toggleSection(sectionId) {
     const sections = document.querySelectorAll('section');
+    
+    // Hide all sections with fade-out animation
     sections.forEach(section => {
-        section.style.display = 'none'; // Hide all sections
-        section.classList.remove('fade-in'); // Remove fade-in animation class
+        section.style.opacity = 0; // Start fading out
+        setTimeout(() => {
+            section.style.display = 'none'; // Hide the section after fade-out
+        }, 300); // 300ms should be enough to complete the fade-out
     });
 
     const section = document.getElementById(sectionId);
     if (section) {
         section.style.display = 'block'; // Show the selected section
-        section.classList.add('fade-in'); // Add fade-in animation class
+        // Reset the section opacity and trigger the fade-in
+        section.style.opacity = 0; // Ensure opacity is reset
+        setTimeout(() => {
+            section.classList.add('fade-in'); // Add fade-in class to trigger animation
+            section.style.opacity = 1; // Apply opacity for fade-in
+        }, 50); // Small delay to trigger animation
     }
 }
 
