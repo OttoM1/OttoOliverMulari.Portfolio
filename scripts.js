@@ -29,7 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 */
 
-// Three.js Scene Setup
 function toggleSection(sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
@@ -46,29 +45,9 @@ function toggleSection(sectionId) {
     }
 }
 
-// Show the "About Me" section by default and initialize animations
-document.addEventListener('DOMContentLoaded', () => {
-    toggleSection('about-me');
-    startMatrixEffect(); // Start falling binary animation
-    customCursorTrail(); // Enable custom cursor trail
-    animateSVG(); // Start the SVG animation for "OM" and curvy dash on scroll
-});
-
-// Navigation smooth scrolling and section toggle
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        toggleSection(targetId);
-    });
-});
-
 // Falling Binary (Matrix Effect)
 function startMatrixEffect() {
-    const canvas = document.createElement('canvas');
-    canvas.id = 'matrixCanvas';
-    document.body.appendChild(canvas);
-
+    const canvas = document.getElementById('matrixCanvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -93,6 +72,12 @@ function startMatrixEffect() {
     }
 
     setInterval(drawMatrix, 50);
+
+    // Update canvas size on window resize
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
 }
 
 // Custom Cursor Trail Effect
@@ -102,38 +87,41 @@ function customCursorTrail() {
     document.body.appendChild(trail);
 
     document.addEventListener('mousemove', (e) => {
-        trail.style.left = ${e.pageX}px;
-        trail.style.top = ${e.pageY}px;
+        trail.style.left = `${e.pageX}px`;
+        trail.style.top = `${e.pageY}px`;
     });
 }
 
 // Animate the SVG paths for "OM" and the Curvy Dash
 function animateSVG() {
     const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
-    signaturePaths.forEach(path => {
-        const rect = path.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            path.classList.add('visible');
-        }
-    });
 
-    window.addEventListener('scroll', () => {
+    function handleScroll() {
         signaturePaths.forEach(path => {
             const rect = path.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom >= 0) {
                 path.classList.add('visible');
             }
         });
-    });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('DOMContentLoaded', handleScroll);
 }
 
-// SVG Paths animation for drawing OM and curvy dash
-window.addEventListener('scroll', () => {
-    const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
-    signaturePaths.forEach(path => {
-        const rect = path.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            path.style.animation = 'drawPath 2s ease-out forwards';
-        }
+// Show the "About Me" section by default and initialize animations
+document.addEventListener('DOMContentLoaded', () => {
+    toggleSection('about-me');
+    startMatrixEffect();
+    customCursorTrail();
+    animateSVG();
+});
+
+// Navigation smooth scrolling and section toggle
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        toggleSection(targetId);
     });
 });
