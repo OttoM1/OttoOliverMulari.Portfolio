@@ -57,23 +57,21 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-/* Fade-In Animation */
-@keyframes fadeIn {
+/* Fade-Up Animation */
+@keyframes fadeUp {
     0% {
-        visibility: hidden;
+        transform: translateY(50px);
         opacity: 0;
-        transform: translateY(30px);
     }
     100% {
-        visibility: visible;
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
-/* Class for elements with fade-in effect */
-.fade-in {
-    animation: fadeIn 1s ease-out;
+/* Class for elements with fade-up effect */
+.fade-in-up {
+    animation: fadeUp 0.8s ease-out;
 }
 
 /* Section */
