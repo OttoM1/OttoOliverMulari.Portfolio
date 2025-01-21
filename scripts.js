@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleSection('about-me');
     startMatrixEffect(); // Start falling binary animation
     customCursorTrail(); // Enable custom cursor trail
-    animateSVG(); // Start the SVG animation for "OM" on scroll
+    animateSVG(); // Start the SVG animation for "OM" and curvy dash on scroll
 });
 
 // Navigation smooth scrolling and section toggle
@@ -106,7 +106,7 @@ function customCursorTrail() {
     });
 }
 
-// Animate the SVG paths for "OM"
+// Animate the SVG paths for "OM" and the Curvy Dash
 function animateSVG() {
     const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
     signaturePaths.forEach(path => {
@@ -128,9 +128,11 @@ function animateSVG() {
 
 // SVG Paths animation for drawing OM and curvy dash
 window.addEventListener('scroll', () => {
-    const path = document.querySelector('.animated-path');
-    const rect = path.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        path.style.animation = 'drawPath 2s ease-out forwards';
-    }
+    const signaturePaths = document.querySelectorAll('.signature, .curvy-dash');
+    signaturePaths.forEach(path => {
+        const rect = path.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            path.style.animation = 'drawPath 2s ease-out forwards';
+        }
+    });
 });
