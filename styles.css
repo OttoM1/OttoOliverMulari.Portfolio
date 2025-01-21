@@ -17,7 +17,7 @@ body {
 
 
 header {
-    background-color: rgba(8, 8, 8, 0.8); /* Slightly transparent grey */
+    background-color: rgba(3, 3, 3, 0.7); /* Slightly transparent grey */
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -97,7 +97,7 @@ nav ul li a:hover {
 section {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: rgba(11, 11, 11, 0.8); /* Semi-transparent grey */
+    background-color: rgba(6, 6, 6, 0.7); /* Semi-transparent grey */
     color: white;
     border-radius: 8px;
     display: none; /* Default to not visible */
@@ -119,7 +119,7 @@ section h2 {
 
 /* Footer */
 footer {
-    background-color: rgba(11, 11, 11, 0.8); /* Semi-transparent grey */
+    background-color: rgba(6, 6, 6, 0.7); /* Semi-transparent grey */
     color: white;
     text-align: center;
     padding: 1rem 0;
