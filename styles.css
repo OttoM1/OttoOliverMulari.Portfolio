@@ -117,7 +117,9 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
+    position: fixed; /* Fix footer at the bottom */
+    bottom: 0;       /* Position it at the very bottom */
+    width: 100%;     /* Make it span the full width of the screen */
 }
 
 footer p {
