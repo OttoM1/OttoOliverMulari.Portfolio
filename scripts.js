@@ -46,7 +46,6 @@ function toggleSection(sectionId) {
 }
 
 // Falling Binary (Matrix Effect)
-// Falling Binary (Matrix Effect)
 function startMatrixEffect() {
     const canvas = document.createElement('canvas');
     canvas.id = 'matrixCanvas';
@@ -82,7 +81,6 @@ function startMatrixEffect() {
     }
 
     setInterval(drawMatrix, 50); // Redraw the matrix every 50ms
-}
 
     // Update canvas size on window resize
     window.addEventListener('resize', () => {
