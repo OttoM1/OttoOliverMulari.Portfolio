@@ -15,13 +15,19 @@ body {
 }
 
 /* Header */
+
+
 header {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent grey */
     color: white;
     text-align: center;
     padding: 2rem 0;
     animation: fadeIn 1s ease-out;
 }
+
+
+
+
 
 header h1 {
     font-size: 2.5rem;
