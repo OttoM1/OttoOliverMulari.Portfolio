@@ -196,31 +196,14 @@ html {
     }
 }
 
-/* Style for the animated signature */
-.signature {
-    fill: none;
-    stroke: #4CAF50;
-    stroke-width: 3;
-    stroke-dasharray: 300; /* Length of the path for animation */
-    stroke-dashoffset: 300; /* Initially hides the path */
+/* Class for SVG Path Animation */
+.signature, .curvy-dash {
+    stroke-dasharray: 300; /* Length of the path */
+    stroke-dashoffset: 300; /* Initial hidden state */
     transition: stroke-dashoffset 2s ease-out;
 }
 
-/* When the signature element is in view, animate the stroke */
-.signature.visible {
-    stroke-dashoffset: 0; /* Fully visible path */
-}
-
-/* Curvy dash animation */
-.curvy-dash {
-    fill: none;
-    stroke: #4CAF50;
-    stroke-width: 3;
-    stroke-dasharray: 150;
-    stroke-dashoffset: 150;
-    transition: stroke-dashoffset 2s ease-out;
-}
-
-.curvy-dash.visible {
-    stroke-dashoffset: 0;
+/* Apply the visible class when the path is in the viewport */
+.signature.visible, .curvy-dash.visible {
+    animation: drawPath 2s ease-out forwards;
 }
