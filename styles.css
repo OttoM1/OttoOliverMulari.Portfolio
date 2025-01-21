@@ -209,8 +209,8 @@ html {
 
 
 .highlighted-text {
-    font-size: 1.8rem; /* Adjust as needed */
-    line-height: 2; /* Optional for readability */
+    font-size: 2.1rem; /* Adjust as needed */
+    line-height: 2.4; /* Optional for readability */
     margin-top: 1rem; /* Optional for spacing */
     color: #FFFFFF; /* Ensure consistent color */
 }
