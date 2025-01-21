@@ -14,8 +14,6 @@ body {
 }
 
 /* Header */
-
-
 header {
     background-color: rgba(3, 3, 3, 0.7); /* Slightly transparent grey */
     color: white;
@@ -24,16 +22,12 @@ header {
     animation: fadeIn 1s ease-out;
 }
 
-
-
-
-
 header h1 {
-    font-size: 2.6rem;
+    font-size: 3.4rem; /* Increased by ~30% from 2.6rem */
 }
 
 header p {
-    font-size: 1.4rem;
+    font-size: 1.8rem; /* Increased by ~30% from 1.4rem */
     margin-top: 0.5rem;
 }
 
@@ -53,7 +47,7 @@ nav ul li {
 nav ul li a {
     color: #4CAF50;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 2.34rem; /* Increased by ~30% from 1.8rem */
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -95,8 +89,8 @@ nav ul li a:hover {
 
 /* Section */
 section {
-    padding: 2rem;
-    margin: 1rem 0;
+    padding: 2.6rem; /* Increased by ~30% from 2rem */
+    margin: 1.3rem 0; /* Increased by ~30% from 1rem */
     background-color: rgba(6, 6, 6, 0.7); /* Semi-transparent grey */
     color: white;
     border-radius: 8px;
@@ -113,8 +107,8 @@ section.visible {
 /* Header of Section */
 section h2 {
     color: #4CAF50;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 2.34rem; /* Increased by ~30% from 1.8rem */
+    margin-bottom: 1.3rem; /* Increased by ~30% from 1rem */
 }
 
 /* Footer */
@@ -130,7 +124,7 @@ footer {
 
 footer p {
     color: #4CAF50;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Unchanged */
 }
 
 /* Style the email link */
