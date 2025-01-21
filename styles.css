@@ -71,7 +71,7 @@ nav ul li a:hover {
 
 /* Class for elements with fade-up effect */
 .fade-in-up {
-    animation: fadeUp 0.8s ease-out forwards;
+    animation: fadeUp 0.8s ease-out;
 }
 
 /* Section */
@@ -85,7 +85,7 @@ section {
     opacity: 0;         /* Initial opacity */
 }
 
-/* Section heading styles */
+/* Header of Section */
 section h2 {
     color: #4CAF50;
     font-size: 1.8rem;
@@ -119,42 +119,4 @@ footer p {
 /* Hover effect for links in the footer */
 footer a:hover {
     color: #FFFFFF;
-}
-
-/* Section for Images */
-section.images {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-/* Style for the first image */
-section.images .image-1 {
-    background-image: url('images/IMG_2943.heic');
-    background-size: cover;
-    background-position: center;
-    width: 15vw;
-    height: 200px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-section.images .image-2 {
-    background-image: url('images/IMG_3161.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 15vw;
-    height: 200px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-section.images .image-1:hover,
-section.images .image-2:hover {
-    transform: scale(1.1);
-}
-
-/* Zoom effect for images */
-.zoom {
-    transition: transform 0.3s ease;
 }
