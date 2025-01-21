@@ -71,7 +71,9 @@ nav ul li a:hover {
 
 /* Class for elements with fade-in effect */
 .fade-in {
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 /* Section */
@@ -81,9 +83,11 @@ section {
     background-color: #222;
     color: white;
     border-radius: 8px;
-    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+/* Section Titles */
 section h2 {
     color: #4CAF50;
     font-size: 1.8rem;
@@ -114,7 +118,30 @@ footer p {
     color: #FFFFFF;
 }
 
-/* Hover effect for links in the footer */
-footer a:hover {
-    color: #FFFFFF;
+/* Section for Images (If applicable) */
+section.images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Style for the images */
+section.images .image-1, section.images .image-2 {
+    background-size: cover;
+    background-position: center;
+    width: 15vw;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+section.images .image-1:hover,
+section.images .image-2:hover {
+    transform: scale(1.1);
+}
+
+/* Smooth fade-out for hidden sections */
+section.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
 }
