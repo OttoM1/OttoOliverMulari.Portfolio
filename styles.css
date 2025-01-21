@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -92,7 +91,7 @@ nav ul li a:hover {
 section {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent grey */
     color: white;
     border-radius: 8px;
     display: none; /* Default to not visible */
@@ -114,7 +113,7 @@ section h2 {
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent grey */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -140,9 +139,6 @@ footer p {
 footer a:hover {
     color: #FFFFFF;
 }
-
-
-
 
 /* Falling Binary Canvas */
 #matrixCanvas {
