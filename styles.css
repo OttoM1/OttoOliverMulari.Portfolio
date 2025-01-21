@@ -129,12 +129,12 @@ footer p {
 
 /* Style the email link */
 .email-link {
-    color: green;
+    color: white;
     text-decoration: none;
 }
 
 .email-link:hover {
-    color: #FFFFFF;
+    color: ##4CAF50;
 }
 
 /* Hover effect for links in the footer */
