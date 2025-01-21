@@ -163,3 +163,34 @@ footer a:hover {
     z-index: 9999;
     transition: transform 0.1s ease-out;
 }
+
+nav ul li a {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Floating element style (circle) */
+#floatingElement {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(76, 175, 80, 0.7); /* Greenish color */
+    border-radius: 50%; /* Circular shape */
+    animation: floatAround 5s ease-in-out infinite; /* Floating animation */
+    z-index: 10;
+    pointer-events: none; /* Prevent it from interfering with other elements */
+}
+
+/* Floating animation */
+@keyframes floatAround {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -70%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
