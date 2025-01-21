@@ -9,37 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }, fadeInDuration);
     });
 
-    // Random Alphabet Matrix Effect Canvas (non-binary)
+    // Binary Matrix Effect Canvas (remains unchanged from before)
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
-    const columns = canvas.width / 20; // Determine number of columns
-    const drops = Array.from({ length: columns }).map(() => 0); // Initialize drop positions
-
-    const dropSpeed = 0.5;  // Speed factor for falling symbols (lower value = slower)
+    const columns = canvas.width / 20;
+    const drops = Array.from({ length: columns }).map(() => 0);
 
     function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.04)"; // Background fade effect
+        ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = "#0F0"; // Set the color for the characters
-        ctx.font = "20px monospace"; // Font style for characters
-
-        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"; // Possible characters
+        ctx.fillStyle = "#0F0";
+        ctx.font = "20px monospace";
 
         drops.forEach((y, x) => {
-            const text = characters[Math.floor(Math.random() * characters.length)]; // Random character
-            ctx.fillText(text, x * 20, y * 20); // Draw the character
-
-            // Slow down the fall of the characters
+            const text = Math.random() > 0.9 ? String.fromCharCode(Math.random() * 255) : " ";
+            ctx.fillText(text, x * 20, y * 20);
             if (y * 20 > canvas.height && Math.random() > 0.975) {
-                drops[x] = 0;  // Reset the drop to the top when it goes off screen
+                drops[x] = 0;
             }
-            drops[x] += dropSpeed;  // Increment y position with slower speed factor
+            drops[x]++;
         });
     }
-
-    setInterval(draw, 50); // Redraw the matrix effect every 50ms
+    setInterval(draw, 50);
 });
