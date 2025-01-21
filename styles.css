@@ -71,7 +71,7 @@ nav ul li a:hover {
 
 /* Class for elements with fade-up effect */
 .fade-in-up {
-    animation: fadeUp 0.8s ease-out;
+    animation: fadeUp 0.8s ease-out forwards; /* Use 'forwards' to keep the final state */
 }
 
 /* Section */
@@ -83,11 +83,13 @@ section {
     border-radius: 8px;
     display: none; /* Default to not visible */
     opacity: 0;         /* Initial opacity */
+    transition: opacity 0.3s ease; /* Smooth fade-in for visibility */
 }
 
 /* Show the section */
 section.visible {
     display: block;  /* Make section visible */
+    opacity: 1;      /* Ensure opacity is set to 1 when visible */
 }
 
 /* Header of Section */
