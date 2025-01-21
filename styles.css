@@ -9,12 +9,13 @@ body {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #ddd;
-    background: linear-gradient(120deg, #000, #222);
-    overflow-x: hidden;
+    background-color: #000;
     padding: 0 20px;
 }
 
 /* Header */
+
+
 header {
     background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent grey */
     color: white;
@@ -22,6 +23,10 @@ header {
     padding: 2rem 0;
     animation: fadeIn 1s ease-out;
 }
+
+
+
+
 
 header h1 {
     font-size: 2.5rem;
@@ -53,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    transform: scale(1.2) rotate(5deg);
+    transform: scale(1.2);
     color: #FFFFFF;
 }
 
@@ -69,21 +74,23 @@ nav ul li a:hover {
     }
 }
 
-@-webkit-keyframes fadeUp {
+/* Vendor Prefixes for Safari and older browsers */
+@-webkit-keyframes fadeUp { /* For Safari & older WebKit browsers */
     0% {
-        transform: translateY(50px);
+        transform: translateY(50px); /* Start 50px below */
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(0);    /* End at normal position */
         opacity: 1;
     }
 }
 
+/* Class for elements with fade-up effect */
 .fade-in-up {
     animation: fadeUp 0.8s ease-out;
-    -webkit-animation: fadeUp 0.8s ease-out;
-    will-change: transform, opacity;
+    -webkit-animation: fadeUp 0.8s ease-out;  /* Safari support */
+    will-change: transform, opacity; /* Performance optimization */
 }
 
 /* Section */
@@ -97,11 +104,13 @@ section {
     opacity: 0;    /* Initial opacity */
 }
 
+/* Show the section */
 section.visible {
-    display: block;
-    opacity: 1;
+    display: block;  /* Make section visible */
+    opacity: 1;      /* Ensure opacity is full */
 }
 
+/* Header of Section */
 section h2 {
     color: #4CAF50;
     font-size: 1.8rem;
@@ -114,9 +123,9 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: fixed; /* Fix footer at the bottom */
+    bottom: 0;       /* Position it at the very bottom */
+    width: 100%;     /* Make it span the full width of the screen */
 }
 
 footer p {
@@ -124,6 +133,7 @@ footer p {
     font-size: 0.9rem;
 }
 
+/* Style the email link */
 .email-link {
     color: green;
     text-decoration: none;
@@ -133,6 +143,7 @@ footer p {
     color: #FFFFFF;
 }
 
+/* Hover effect for links in the footer */
 footer a:hover {
     color: #FFFFFF;
 }
@@ -159,6 +170,18 @@ footer a:hover {
     transition: transform 0.1s ease-out;
 }
 
+/* Additional Navigation Hover Effect */
+nav ul li a:hover {
+    color: #FFFFFF;
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Parallax Background Effect */
+body {
+    background: linear-gradient(120deg, #000, #222);
+    overflow-x: hidden;
+}
+
 /* Smooth Scroll Behavior */
 html {
     scroll-behavior: smooth;
@@ -171,19 +194,21 @@ html {
 
 @keyframes drawPath {
     from {
-        stroke-dashoffset: 300;
+        stroke-dashoffset: 300; /* Hides the line initially */
     }
     to {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 0; /* Fully draws the line */
     }
 }
 
+/* Class for SVG Path Animation */
 .signature, .curvy-dash {
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
+    stroke-dasharray: 300; /* Length of the path */
+    stroke-dashoffset: 300; /* Initial hidden state */
     transition: stroke-dashoffset 2s ease-out;
 }
 
+/* Apply the visible class when the path is in the viewport */
 .signature.visible, .curvy-dash.visible {
     animation: drawPath 2s ease-out forwards;
 }
