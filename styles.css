@@ -53,12 +53,12 @@ nav ul li {
 nav ul li a {
     color: #4CAF50;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-    transform: scale(1.4);
+    transform: scale(1.8);
     color: #FFFFFF;
 }
 
