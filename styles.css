@@ -71,17 +71,9 @@ nav ul li a:hover {
 
 /* Class for elements with fade-up effect */
 .fade-in-up {
-    animation: fadeUp 0.8s ease-out;
+    animation: fadeUp 0.8s ease-out forwards;
 }
 
-/* Other styles */
-body {
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 1.6;
-    color: #ddd;
-    background-color: #000;
-    padding: 0 20px;
-}
 /* Section */
 section {
     padding: 2rem;
@@ -91,9 +83,9 @@ section {
     border-radius: 8px;
     visibility: hidden; /* Default to hidden */
     opacity: 0;         /* Initial opacity */
-    animation: fadeIn 1s ease-out forwards;
 }
 
+/* Section heading styles */
 section h2 {
     color: #4CAF50;
     font-size: 1.8rem;
