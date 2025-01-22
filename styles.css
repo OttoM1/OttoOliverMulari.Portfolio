@@ -58,16 +58,30 @@ nav ul li a:hover {
 
 /* tää alue muista !!!!!!*/
 @keyframes floatSignature {
-    0% {
-        transform: translateY(0) rotate(0);
+
+ 0% {
+        transform: rotate(0deg); 
     }
-    50% {
-        transform: translateY(-5px) rotate(-5deg); /* 10 ja 5 */
+    20% {
+        transform: rotate(-5deg); 
+    }
+    30% {
+        transform: rotate(5deg); 
     }
     100% {
-        transform: translateY(0) rotate(5deg); /* täs oli joku bugi/ 5deg */
+        transform: rotate(0deg); /* tas oli bugii */
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 .signature {
