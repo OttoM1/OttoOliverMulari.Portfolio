@@ -133,12 +133,12 @@ section.visible {
 
 section h2 {
     color: #4CAF50;
-    font-size: 2.34rem;
+    font-size: 2.8rem;
     margin-bottom: 1.3rem;
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.6); /* 0.7 */
+    background-color: rgba(0, 0, 0, 0.4); /* 0.7 */
     color: white;
     text-align: center;
     padding: 1rem 0;
