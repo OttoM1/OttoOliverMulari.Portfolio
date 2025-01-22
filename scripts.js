@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
-    const fadeInDuration = 1000; // Slower fade-in duration
+    const fadeInDuration = 1000; 
 
-    // Apply fade-in effect with a smooth timing
+    // fadee enemman tahan 
     sections.forEach((section) => {
         section.classList.add('fade-in-up');
         setTimeout(() => {
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, fadeInDuration);
     });
 
-    // Binary Matrix Effect Canvas with Slow and Elegant Animation
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight;
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const drops = Array.from({ length: columns }).map(() => 0);
 
     function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // A lighter black for subtle background
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; 
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = "#0F0";
@@ -31,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillText(text, x * 20, y * 20);
 
             if (y * 20 > canvas.height && Math.random() > 0.975) {
-                drops[x] = 0; // Reset symbol's position when it goes off-screen
+                drops[x] = 0; 
             }
 
-            // Slow and elegant movement
-            drops[x] += Math.random() > 0.95 ? 1 : 0.5; // Randomize fall speed
+            // Hidastetaa enemma tarvittaes
+            drops[x] += Math.random() > 0.95 ? 1 : 0.5; 
         });
     }
 
-    setInterval(draw, 60); // Slower interval for a slower fall
+    setInterval(draw, 60); 
 });
