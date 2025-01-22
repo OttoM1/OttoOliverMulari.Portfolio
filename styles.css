@@ -62,10 +62,10 @@ nav ul li a:hover {
         transform: translateY(0) rotate(0);
     }
     50% {
-        transform: translateY(-5px) rotate(-25deg); /* 10 ja 5 */
+        transform: translateY(-5px) rotate(-5deg); /* 10 ja 5 */
     }
     100% {
-        transform: translateY(0) rotate(20deg); /* täs oli joku bugi/ 5deg */
+        transform: translateY(0) rotate(5deg); /* täs oli joku bugi/ 5deg */
     }
 }
 
