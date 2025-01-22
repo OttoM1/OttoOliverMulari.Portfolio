@@ -62,16 +62,16 @@ nav ul li a:hover {
         transform: translateY(0) rotate(0);
     }
     50% {
-        transform: translateY(-10px) rotate(-5deg); 
+        transform: translateY(-30px) rotate(-15deg); /* 10 ja 5 */
     }
     100% {
-        transform: translateY(0) rotate(5deg); /* täs oli joku bugi */
+        transform: translateY(0) rotate(15deg); /* täs oli joku bugi/ 5deg */
     }
 }
 
 
 .signature {
-    animation: floatSignature 5s ease-in-out infinite; 
+    animation: floatSignature 8s ease-in-out infinite; /* 5s */
 }
 
 @keyframes fadeUp {
@@ -114,7 +114,7 @@ section {
 
 section.visible {
     display: block;
-    opacity: 0.7;
+    opacity: 0.7; /* taa takas 1.0 tarvittaes */
 }
 
 section h2 {
@@ -124,7 +124,7 @@ section h2 {
 }
 
 footer {
-    background-color: rgba(6, 6, 6, 0.7);
+    background-color: rgba(6, 6, 6, 0.4); /* 0.7 */
     color: white;
     text-align: center;
     padding: 1rem 0;
