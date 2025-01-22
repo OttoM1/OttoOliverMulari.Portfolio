@@ -62,10 +62,10 @@ nav ul li a:hover {
  0% {
         transform: rotate(0deg); 
     }
-    20% {
-        transform: rotate(-2deg); 
+    40% {
+        transform: rotate(-2deg);  /* 20 ja 30alempi */
     }
-    30% {
+    60% {
         transform: rotate(2deg); 
     }
     100% {
