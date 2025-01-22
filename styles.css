@@ -63,10 +63,10 @@ nav ul li a:hover {
         transform: rotate(0deg); 
     }
     20% {
-        transform: rotate(-5deg); 
+        transform: rotate(-2deg); 
     }
     30% {
-        transform: rotate(5deg); 
+        transform: rotate(2deg); 
     }
     100% {
         transform: rotate(0deg); /* tas oli bugii */
