@@ -173,28 +173,3 @@ footer p {
 
 
 
-
-
-#about-me p {
-    font-size: 2.7rem;  /* Increased font size */
-    padding: 1.5rem 0;   /* Add padding for better spacing */
-    margin-bottom: 1.8rem; /* Adjust margin to keep it well-spaced */
-}
-
-/* Targeting the #skills section list items */
-#skills ul li {
-    font-size: 3.51rem; /* Increased font size */
-    margin-bottom: 1.8rem;  /* Adjust margin to add space between items */
-}
-
-/* Optional: For better readability, increase font size for all sections with text */
-section p {
-    font-size: 1.35rem; /* Increased font size for paragraphs */
-    padding: 1rem 0;    /* Add padding to maintain spacing */
-}
-
-/* Adjust padding and margins in header or section titles if needed */
-section h2 {
-    font-size: 3.5rem;  /* Increased font size for headings */
-    margin-bottom: 2rem; /* Adjust spacing for better alignment */
-}
