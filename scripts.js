@@ -43,15 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 */
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const fadeInDuration = 1000;
     let currentSectionIndex = 0;
-    let isScrolling = false; // Flag to prevent multiple scroll actions at once
+    let isScrolling = false;
 
-    // fadee enemman tahan
+    // Add initial fade-in effect for all sections
     sections.forEach((section) => {
         section.classList.add('fade-in-up');
         setTimeout(() => {
@@ -82,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 drops[x] = 0;
             }
 
-            // Hidastetaa enemma tarvittaes
             drops[x] += Math.random() > 0.95 ? 1 : 0.5;
         });
     }
@@ -91,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to handle scroll events
     function handleScroll(event) {
-        if (isScrolling) return; // Prevent scrolling if already in the middle of an action
+        if (isScrolling) return;
 
         isScrolling = true;
         if (event.deltaY > 0) {
@@ -108,10 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // After the scroll transition ends, allow another scroll action
         setTimeout(() => {
             isScrolling = false;
-        }, 1000); // Duration must match the fade-in or transition time
+        }, 1000); // Ensure no multiple scroll actions at once
     }
 
     // Function to update the visible section
@@ -122,14 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show the current section
         sections[currentSectionIndex].classList.add('visible');
         
-        // Scroll smoothly to the current section (for better UX)
+        // Scroll smoothly to the current section
         sections[currentSectionIndex].scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
     }
 
-    // Initial visibility
+    // Initial visibility setup
     updateVisibleSection();
 
     // Add the scroll event listener
