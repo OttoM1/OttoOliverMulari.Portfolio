@@ -128,7 +128,7 @@ section {
 
 section.visible {
     display: block;
-    opacity: 0.1; /* taa takas 1.0 tarvittaes */
+    opacity: 0.8; /* taa takas 1.0 tarvittaes */
 }
 
 section h2 {
