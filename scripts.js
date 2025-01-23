@@ -44,11 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
-    const fadeInDuration = 1000; 
+    const fadeInDuration = 1000;
+    let currentSectionIndex = 0;
+    let isScrolling = false; // Flag to prevent multiple scroll actions at once
 
-    // fadee enemman tahan 
+    // fadee enemman tahan
     sections.forEach((section) => {
         section.classList.add('fade-in-up');
         setTimeout(() => {
@@ -65,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const drops = Array.from({ length: columns }).map(() => 0);
 
     function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; 
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = "#0F0";
@@ -76,21 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillText(text, x * 20, y * 20);
 
             if (y * 20 > canvas.height && Math.random() > 0.975) {
-                drops[x] = 0; 
+                drops[x] = 0;
             }
 
             // Hidastetaa enemma tarvittaes
-            drops[x] += Math.random() > 0.95 ? 1 : 0.5; 
+            drops[x] += Math.random() > 0.95 ? 1 : 0.5;
         });
     }
 
-    setInterval(draw, 60); 
-
-    // Full-page scroll functionality
-    let currentSectionIndex = 0;
+    setInterval(draw, 60);
 
     // Function to handle scroll events
     function handleScroll(event) {
+        if (isScrolling) return; // Prevent scrolling if already in the middle of an action
+
+        isScrolling = true;
         if (event.deltaY > 0) {
             // Scroll down: Move to the next section
             if (currentSectionIndex < sections.length - 1) {
@@ -104,14 +107,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateVisibleSection();
             }
         }
+
+        // After the scroll transition ends, allow another scroll action
+        setTimeout(() => {
+            isScrolling = false;
+        }, 1000); // Duration must match the fade-in or transition time
     }
 
+    // Function to update the visible section
     function updateVisibleSection() {
         // Hide all sections
         sections.forEach((section) => section.classList.remove('visible'));
 
         // Show the current section
         sections[currentSectionIndex].classList.add('visible');
+        
+        // Scroll smoothly to the current section (for better UX)
+        sections[currentSectionIndex].scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
 
     // Initial visibility
