@@ -43,91 +43,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 */
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
-    const fadeInDuration = 1000;
-    let currentSectionIndex = 0;
-    let isScrolling = false;
+    let currentSectionIndex = 0;  // Track which section is currently visible
 
-    // Add initial fade-in effect for all sections
-    sections.forEach((section) => {
-        section.classList.add('fade-in-up');
-        setTimeout(() => {
-            section.classList.add('visible');
-        }, fadeInDuration);
-    });
-
-    const canvas = document.getElementById("matrixCanvas");
-    const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-
-    const columns = canvas.width / 20;
-    const drops = Array.from({ length: columns }).map(() => 0);
-
-    function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.fillStyle = "#0F0";
-        ctx.font = "20px monospace";
-
-        drops.forEach((y, x) => {
-            const text = Math.random() > 0.9 ? String.fromCharCode(Math.random() * 255) : " ";
-            ctx.fillText(text, x * 20, y * 20);
-
-            if (y * 20 > canvas.height && Math.random() > 0.975) {
-                drops[x] = 0;
+    // Function to show the current section and hide the others
+    function updateSections() {
+        sections.forEach((section, index) => {
+            if (index === currentSectionIndex) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
             }
-
-            drops[x] += Math.random() > 0.95 ? 1 : 0.5;
         });
     }
 
-    setInterval(draw, 60);
+    // Show the first section initially
+    updateSections();
 
-    // Function to handle scroll events
-    function handleScroll(event) {
-        if (isScrolling) return;
-
-        isScrolling = true;
+    // Handle the scroll event to move to the next or previous section
+    window.addEventListener('wheel', (event) => {
         if (event.deltaY > 0) {
-            // Scroll down: Move to the next section
+            // Scroll down: Go to the next section
             if (currentSectionIndex < sections.length - 1) {
                 currentSectionIndex++;
-                updateVisibleSection();
+                updateSections();
             }
         } else {
-            // Scroll up: Move to the previous section
+            // Scroll up: Go to the previous section
             if (currentSectionIndex > 0) {
                 currentSectionIndex--;
-                updateVisibleSection();
+                updateSections();
             }
         }
-
-        setTimeout(() => {
-            isScrolling = false;
-        }, 1000); // Ensure no multiple scroll actions at once
-    }
-
-    // Function to update the visible section
-    function updateVisibleSection() {
-        // Hide all sections
-        sections.forEach((section) => section.classList.remove('visible'));
-
-        // Show the current section
-        sections[currentSectionIndex].classList.add('visible');
-        
-        // Scroll smoothly to the current section
-        sections[currentSectionIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-
-    // Initial visibility setup
-    updateVisibleSection();
-
-    // Add the scroll event listener
-    document.addEventListener('wheel', handleScroll);
+    });
 });
