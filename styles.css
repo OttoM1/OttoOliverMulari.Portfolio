@@ -186,6 +186,9 @@ footer p {
         overflow-x: hidden; /* Prevents horizontal scrolling */
 
   }
+    html, body {
+    overflow-x: hidden;
+}
 
 }
 
@@ -197,6 +200,9 @@ footer p {
         overflow-x: hidden; /* Prevents horizontal scrolling */
 
   }
+    html, body {
+    overflow-x: hidden;
+}
 
 }
 
