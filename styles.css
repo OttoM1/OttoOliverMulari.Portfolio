@@ -170,4 +170,6 @@ footer p {
     z-index: -1;
     pointer-events: none;
     opacity: 0.6;
+        overflow-x: hidden;
+
 }
