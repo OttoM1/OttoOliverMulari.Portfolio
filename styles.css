@@ -10,13 +10,41 @@ body {
     color: #ddd;
     background-color: #000;
     padding: 0 20px;
-   
     overflow-x: hidden;
 }
 
+li {
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 
+        -2px -2px 0 black, 
+        2px -2px 0 black, 
+        -2px 2px 0 black, 
+        2px 2px 0 black;
+}
+li:hover {
+    color: rgb(180, 255, 201);
+    scale: 1.04;
+
+}
+p:hover {
+    color:  rgb(180, 255, 201);
+    scale: 1.04;
+
+}
+ p {
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 
+        -2px -2px 0 black, 
+        2px -2px 0 black, 
+        -2px 2px 0 black, 
+        2px 2px 0 black;
+
+}
 
 header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -113,15 +141,15 @@ nav ul li a:hover {
 }
 
 .fade-in-up {
-    animation: fadeUp 1.2s ease-out; 
-    -webkit-animation: fadeUp 1.2s ease-out;
+    animation: fadeIn 1.2s ease-out; 
+    -webkit-animation: fadeIn 1.2s ease-out;
     will-change: transform, opacity;
 }
 
 section {
     padding: 2.6rem;
     margin: 1.3rem 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     border-radius: 8px;
 visibility: hidden;
@@ -160,7 +188,7 @@ footer p {
 }
 
 .email-link:hover {
-    color: ##50C878;
+    color: #50C878;
 }
 
 #matrixCanvas {
@@ -178,7 +206,6 @@ footer p {
 
 
 
-
 @media (max-width: 768px) {
   body {
     margin: 0;
@@ -189,7 +216,22 @@ footer p {
     html, body {
     overflow-x: hidden;
 }
+li {
+    font-size: 12px;
+}
+p {
+    font-size: 12px;
+}
 
+.kuva-otto img {
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 0;
+           margin-bottom: 1rem;
+      width: 47vw;
+       height: 47vw; 
+       object-fit: cover; 
+}
 }
 
 
@@ -204,8 +246,37 @@ footer p {
     overflow-x: hidden;
 }
 
+li {
+    font-size: 12px;
+}
+p {
+    font-size: 12px;
+}
+.kuva-otto img {
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 0;
+           margin-bottom: 1rem;
+      width: 47vw;
+       height: 47vw; 
+       object-fit: cover; 
 }
 
+}
+
+.kuva-otto img {
+    position: absolute; 
+    right: 25px;
+    width: 38vw;
+    top: 94%;
+
+    height: 59.5vh;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 9px 0 14px rgba(7, 70, 1, 0.83);
+    animation: fadeIn 3.9s ease-in-out;
+    opacity: 1;
+}
 
 
 
