@@ -217,14 +217,15 @@ footer p {
     overflow-x: hidden;
 }
 li {
-    font-size: 12px;
+    font-size: 15px;
 }
 p {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .kuva-otto img {
     visibility: hidden;
+    display: none;
 }
 }
 
@@ -241,13 +242,14 @@ p {
 }
 
 li {
-    font-size: 12px;
+    font-size: 15px;
 }
 p {
-    font-size: 12px;
+    font-size: 15px;
 }
 .kuva-otto img {
     visibility: hidden;
+    display: none;
 
 }
 
