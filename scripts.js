@@ -1,3 +1,8 @@
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const fadeInDuration = 1000; 
@@ -34,9 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Hidastetaa enemma tarvittaes
-            drops[x] += Math.random() > 0.95 ? 1 : 0.5; 
+            drops[x] += Math.random() > 0.95 ? 1 : 0.1; 
         });
     }
 
-    setInterval(draw, 60); 
+    setInterval(draw, 100); 
 });
+window.scrollTo(0, 0);
