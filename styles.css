@@ -213,14 +213,19 @@ footer p {
         overflow-x: hidden; 
 
   }
+    
+    footer p{
+        font-size: 12.4px;
+        text-shadow: none;
+    }
     html, body {
     overflow-x: hidden;
 }
 li {
-    font-size: 15px;
+    font-size: 18.5px;
 }
 p {
-    font-size: 15px;
+    font-size: 18.5px;
 }
 
 .kuva-otto img {
@@ -242,11 +247,15 @@ p {
 }
 
 li {
-    font-size: 15px;
+    font-size: 18.5px;
 }
 p {
-    font-size: 15px;
+    font-size: 18.5px;
 }
+    footer p{
+        font-size: 12.4px;
+        text-shadow: none;
+    }
 .kuva-otto img {
     visibility: hidden;
     display: none;
