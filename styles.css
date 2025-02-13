@@ -8,6 +8,9 @@
             display: none; 
     visibility: hidden;
         }
+        #kops a {
+            color: rgb(220, 183, 247);
+        }
 
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -28,12 +31,12 @@ li {
         2px 2px 0 black;
 }
 li:hover {
-    color: rgb(180, 255, 201);
+    color: rgb(89, 89, 89);
     scale: 1.04;
 
 }
 p:hover {
-    color:  rgb(180, 255, 201);
+    color:  rgb(91, 91, 91);
     scale: 1.04;
 
 }
@@ -79,7 +82,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #4CAF50;
+    color: #065a09;
     text-decoration: none;
     font-size: 2.34rem;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -167,7 +170,7 @@ visibility: visible;
 }
 
 section h2 {
-    color: #4CAF50;
+    color: #0e5c11;
     font-size: 2.8rem;
     margin-bottom: 1.3rem;
 }
@@ -183,7 +186,7 @@ footer {
 }
 
 footer p {
-    color: #4CAF50;
+    color: #127615;
     font-size: 0.9rem;
 }
 
@@ -193,7 +196,7 @@ footer p {
 }
 
 .email-link:hover {
-    color: #50C878;
+    color: #072d14;
 }
 
 #matrixCanvas {
@@ -208,10 +211,28 @@ footer p {
 }
 
 
+#projects a {
+  font-size: 29px;
+  color: rgb(227, 207, 255);
+}
+header p {
+  color: #474a4b;
+}
 
 
 
 @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+#projects a {
+  font-size: 27px;
+  color: rgb(227, 207, 255);
+}
+header p {
+  color: #474a4b;
+}
   body {
     margin: 0;
     padding: 0;
@@ -221,10 +242,10 @@ footer p {
 
     .kuva-otto2 img {
                 display: block; 
-                width: 230px; /* Adjust size as needed */
-                height: 230px;
+                width: 322px; 
+                height: 320px;
                 border-radius: 50%;
-                box-shadow: 0px 0px 10px 4px green; /* Green shadow */
+                box-shadow: 0px 0px 10px 4px green; 
                 margin: auto;
         visibility: visible;
             }
@@ -251,14 +272,27 @@ p {
 
 
 @media (max-width: 414px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
   body {
     margin: 0;
     padding: 0;
         overflow-x: hidden;
 
   }
+  #projects a {
+    font-size: 26px;
+    color: rgb(227, 207, 255);
+  }
+  header p {
+    color: #474a4b;
+  }
     html, body {
     overflow-x: hidden;
+}
+header {
+    padding-bottom: 0px;
 }
 
 li {
@@ -279,10 +313,10 @@ p {
     
     .kuva-otto2 img {
                 display: block; 
-                width: 230px; /* Adjust size as needed */
-                height: 230px;
+                width: 316px; 
+                height: 314px;
                 border-radius: 50%;
-                box-shadow: 0px 0px 10px 4px green; /* Green shadow */
+                box-shadow: 0px 0px 10px 4px rgb(52, 52, 52); 
                 margin: auto;
         visibility: visible;
             }
@@ -298,11 +332,9 @@ p {
     height: 59.5vh;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 9px 0 14px rgba(7, 70, 1, 0.83);
+    box-shadow: 9px 0 14px rgba(47, 47, 47, 0.83);
     animation: fadeIn 3.9s ease-in-out;
     opacity: 1;
 }
-
-
 
 
