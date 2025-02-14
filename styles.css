@@ -584,7 +584,7 @@ h1, h2, p, li, a {
     border: none;
     outline: none;
     font-size: 1rem;
-    box-shadow: 0 0 5px rgba(144, 198, 207, 0.6);
+    box-shadow: 0 0 5px rgba(9, 174, 36, 0.6);
     transition: transform 0.8s ease;
     
     }
@@ -600,7 +600,7 @@ h1, h2, p, li, a {
     
     
     #contactForm button {
-    background: rgba(47, 119, 122, 0.75);
+    background: rgba(28, 111, 64, 0.79);
     color: #ffeacf;
     font-weight: bold;
     cursor: pointer;
@@ -634,7 +634,10 @@ h1, h2, p, li, a {
         }
 
         #contactHeading {
-            color: rgb(23, 135, 141);
+            color: #0ba952;
+            font-size: 42px;
+            text-align: center;
+            
         }
 
 
