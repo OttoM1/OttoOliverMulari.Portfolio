@@ -247,3 +247,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fadeElements.forEach(el => observer.observe(el)); 
 });
+
+
+document.getElementById("poks").addEventListener("click", function() {
+    let button = this;
+    button.classList.add("pulse");
+
+    setTimeout(() => {
+        button.classList.remove("pulse"); 
+    }, 400);
+});
