@@ -1,17 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +19,17 @@
 
    
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+ emailjs.init({
+   publicKey: "f83myWnHa8CJyFiQg",
+ });
+})(); 
+</script>
 </head>
 <body>
   
@@ -76,15 +75,15 @@
     
     <main class="container">
        
-        <section id="about-me" class="fade-in-up">
+        <section id="about-me" class="fade-in-up fade-in">
     <h2>❓ About Me</h2>
     <div class="kuva-otto">
         <img src="ottop.jpg" alt="Oton-kuva">
 
     </div>
-    <ul class="dashed-list">
+    <ul class="dashed-list" class="fade-in">
         <li> 
-            A 22-year-old Information Processing Science student at the University of Oulu, truly passionate about programming, AI and designing visually appealing, user-friendly websites with an emphasis on clean, responsive, and intuitive interfaces.
+            A 22-year-old Information Processing Science student at the University of Oulu, truly passionate about programming, AI and designing visually appealing, user-friendly websites with an emphasis on elegant, responsive, and intuitive interfaces.
         </li>
         <br>
         <li>
@@ -114,7 +113,7 @@
   </section>
 
        
-        <section id="skills" class="fade-in-up visible">
+        <section id="skills" class="fade-in-up visible fade-in">
             <h2>⚙️ Skills</h2>
             <ul>
                 <li>Programming Languages: C, CSS, HTML (gaining experience in JavaScript & Java)</li>
@@ -129,8 +128,8 @@
             </ul>
         </section>
 
-        <section id="projects" class="fade-in-up">
-            <h2>Personal Projects</h2>
+        <section id="projects" class="fade-in-up fade-in">
+            <h2>📂 Personal Projects</h2>
              <p>
          <strong>
              <a href="https://onlinegdb.com/H5zZdcpqX" target="_blank">
@@ -139,7 +138,9 @@
            </strong>
              </p>
             
-            <p>A simple yet functional ATM simulator developed in C. It performs essential banking functions such as balance checking, withdrawing, and depositing money. This project, since made with C, deepened my understanding of low-level programming and system architecture, allowing me to appreciate the intricacies of memory management, pointer manipulation, and the foundational structure of modern software. Feel free to try the code.</p>
+            <p>A simple yet functional ATM simulator developed in C. It performs essential banking functions such as balance checking, withdrawing, and depositing money.</p>
+            <p>This project, since made with C, deepened my understanding of low-level programming and system architecture, allowing me to appreciate the intricacies of memory management, pointer manipulation, and the foundational structure of modern software.
+            <p>Feel free to try the code.</p>
             <br>
             <p><strong>Key Tech:</strong> C Programming, Algorithms, Basic Data Structures</p>
 
@@ -153,11 +154,30 @@
         </section>
 
         
-        <section id="contact" class="fade-in-up">
+        <section id="contact" class="fade-in-up fade-in">
             <h2>📞 Contact</h2>
-            <p>Email: <a href="mailto:otto.mularii@gmail.com" class="email-link" aria-label="Send an email to Otto Oliver Mulari">otto.mularii@gmail.com</a></p>
+            <p id="pops">Email: <a href="mailto:otto.mularii@gmail.com" class="email-link" aria-label="Send an email to Otto Oliver Mulari">otto.mularii@gmail.com</a></p>
             <p id="kops">LinkedIn: <a href="https://www.linkedin.com/in/otto-oliver-mulari-2a305b348" target="_blank" aria-label="Visit LinkedIn profile">Otto Oliver Mulari</a></p>
             <p>GitHub: Upon request</p>
+        </section>
+
+
+
+
+
+
+
+        <section id="contact" class="content-section hidden fade-in">
+            <div class="section-content">
+                <h2 id="contactHeading">Let's connect!</h2>
+                <form id="contactForm">
+                    <input class="slowed" type="text" id="Nimi" placeholder="Name" required>
+                    <input class="slowed" type="email" id="Sähköposti" placeholder="Email" required>
+                    <textarea class="slowed" id="Viestisi" placeholder="Message" rows="4" required></textarea>
+                    <button type="submit" id="poks" placeholder="Lähetä" onclick="sendMail()">Send</button>
+                </form>
+               
+            </div>
         </section>
     </main>
 
@@ -170,4 +190,3 @@
     <script src="scripts.js"></script>
 </body>
 </html>
-
