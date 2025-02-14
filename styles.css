@@ -231,7 +231,21 @@ header p {
     ::-webkit-scrollbar {
         display: none;
     }
-
+ .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 255, 0, 0.6);
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 21px;
+            z-index: 400;
+            cursor: pointer;
+        }
 
 #contactForm input, #contactForm textarea {
     background: rgba(30, 30, 30, 0);
@@ -359,6 +373,22 @@ p {
     ::-webkit-scrollbar {
         display: none;
     }
+
+    .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 255, 0, 0.6);
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 21px;
+            z-index: 400;
+            cursor: pointer;
+        }
 
     .story-mode div {
       margin: auto !important;
@@ -787,4 +817,57 @@ h1, h2, p, li, a {
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+
+
+
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 255, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 22px;
+            text-align: center;
+            font-size: 1.2rem;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        #errorMessage {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+
+        #poks {
+            transition: transform 0.1s ease, box-shadow 0.3s ease;
+        }
+        
+        #poks:active {
+            transform: scale(0.9);
+            box-shadow: 0 0 12px rgba(0, 255, 0, 0.8); 
+        }
+        
+        @keyframes buttonPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 255, 0, 0.14);
+            }
+        }
+        
+        .pulse {
+            animation: buttonPulse 0.4s ease-in-out;
         }
