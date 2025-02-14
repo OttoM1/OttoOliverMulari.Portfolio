@@ -174,9 +174,11 @@
                     <input class="slowed" type="text" id="Nimi" placeholder="Name" required>
                     <input class="slowed" type="email" id="Sähköposti" placeholder="Email" required>
                     <textarea class="slowed" id="Viestisi" placeholder="Message" rows="4" required></textarea>
-                    <button type="submit" id="poks" placeholder="Lähetä" onclick="sendMail()">Send</button>
+                    <button type="submit" id="poks">Send</button>
                 </form>
-               
+               <div id="successMessage" class="popup">Message Sent Successfully! Click to Close</div>
+                <div id="errorMessage" class="popup">Failed to Send. Try Again.</div>
+           
             </div>
         </section>
     </main>
