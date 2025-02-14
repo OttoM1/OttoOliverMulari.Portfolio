@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
         }
         draw() {
-            ctx.fillStyle = '#00ffcc';
+            ctx.fillStyle = '#2fba49';
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createParticles() {
         particles = [];
-        for (let i = 0; i < 100; i++) particles.push(new Particle());
+        for (let i = 0; i < 90; i++) particles.push(new Particle());
     }
     createParticles();
 
