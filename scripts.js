@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.style.transform = 'translateY(0)';
                 }, 100);
                 index++;
-               storyTimeout = setTimeout(revealNext, 5350);
+               storyTimeout = setTimeout(revealNext, 5900);
             } else {
                 setTimeout(stopStoryMode, 3000);
             }
