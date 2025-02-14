@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(storyModeButton.style, { 
         position: 'fixed', top: '15px', right: '15px',
         flexDirection: 'column',
-        padding: '12px 20px', backgroundColor: 'green',
+        padding: '12px 20px', backgroundColor: '474a48',
         color: 'white', border: 'none', cursor: 'pointer',
         fontSize: '36.4px', zIndex: '1000', borderRadius: '8px',
         transition: 'background 0.3s ease'
