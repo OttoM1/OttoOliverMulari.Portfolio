@@ -293,8 +293,7 @@ html, body {
     transform: translateX(-50%) !important;
     width: 350px !important; 
     height: 350px !important; 
-    box-shadow: 2px white !important; 
-    animation: fadeIn 3.9s ease-in-out;
+    animation: fadeIn 1.9s ease-in-out;
     border-radius: 50% !important;
     opacity: 0.74;
     z-index: 1000 !important; 
@@ -373,8 +372,7 @@ header {
     transform: translateX(-50%) !important; 
     width: 350px !important; 
     height: 350px !important; 
-    box-shadow: 2px white !important; 
-    animation: fadeIn 3.9s ease-in-out;
+    animation: fadeIn 1.9s ease-in-out;
     border-radius: 50% !important;
     opacity: 0.74 !important;
     z-index: 1000 !important; 
@@ -398,12 +396,11 @@ html, body {
     right: 25px;
     width: 39vw;
     top: 99%;
-
     height: 61.5vh;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 4px 1px 4px 4px rgba(74, 86, 211, 0.83);
-    animation: fadeIn 3.9s ease-in-out;
+    animation: fadeIn 1.9s ease-in-out;
     opacity: 0.74;
 }
 
@@ -442,13 +439,3 @@ input:focus, textarea:focus {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     transform: scale(1.03);
 }
-
-h2:hover, strong:hover, #kops a:hover, #pops a:hover {
-    background: linear-gradient(45deg, #31dbd0, #db7c45, #d67b0d, #da561d, #fffdff);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: gradient-animation 4s linear infinite;
-}
-
