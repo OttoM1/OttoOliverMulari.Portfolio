@@ -266,7 +266,6 @@ document.getElementById("poks").addEventListener("click", function() {
 
 
 
-
 (function() {
     emailjs.init("f83myWnHa8CJyFiQg"); 
 })();
@@ -308,21 +307,6 @@ function showPopup(id) {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-in");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible"); 
-                observer.unobserve(entry.target); 
-            }
-        });
-    }, { threshold: 0.1 });
-
-    fadeElements.forEach(el => observer.observe(el)); 
-});
-
 
 document.getElementById("poks").addEventListener("click", function() {
     let button = this;
@@ -334,3 +318,18 @@ document.getElementById("poks").addEventListener("click", function() {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in, .kuva-otto img"); // Include your image
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); 
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, { threshold: 0 }); // Set threshold to 0 for immediate appearance
+
+    fadeElements.forEach(el => observer.observe(el)); 
+});
