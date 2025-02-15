@@ -19,7 +19,7 @@
             font-family: 'Times New Roman', Times, serif;
             line-height: 1.9;
             color: #ddd;
-           background: radial-gradient(circle, #000000, #101010, #1c1c1e, #303030, #1a1a1a, #000000);
+           background: radial-gradient(circle, #000000, #101010, #1c1c1e, #131212, #1a1a1a, #000000);
 
             padding: 0 20px;
             overflow-x: hidden;
@@ -30,12 +30,16 @@
         li {
             font-size: 21px;
             font-weight: bold;
-            color: rgb(91, 91, 91);
-            text-shadow: 
-                -2px -2px 0 black, 
-                2px -2px 0 black, 
-                -2px 2px 0 black, 
-                2px 2px 0 black;
+           color: rgb(197, 186, 101);
+            background-image: linear-gradient(67deg, #fff8f8, #9cfaff, #67ff6c);
+
+            transition: transform 2.5s ease, color 2.5s ease !important;
+
+            background-size: 400% 400%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradient-animation 27s ease infinite !important;
         }
         li:hover {
             color: rgb(89, 89, 89);
@@ -52,20 +56,46 @@
         
         }
          p {
-            font-size: 21px;
+            
+            font-size: 32px;
+            font-weight: bold; 
+         color: rgb(145, 248, 214);
+         background-image: linear-gradient(67deg, #fff8f8, #9cfaff, #67ff6c);
+
+         background-size: 400% 400%;
+            color: transparent;
+            -webkit-background-clip: text;
             font-weight: bold;
-         color: rgb(91, 91, 91);
+            background-clip: text;
+            animation: gradient-animation 5s ease infinite;
+            transition: transform 1s ease, color 1s ease;
+
         
         }
         
         header {
-            background-color: rgba(0, 0, 0, 0);
-            color: rgb(197, 255, 216);
+          
             text-align: center;
             padding: 2rem 0;
             animation: fadeIn 1.2s ease-out;
+            background: linear-gradient(70deg, #141415, #141413, #1a1919, #4b5254, #82b6c6, #c4ecf9);
+            background-clip: text;
+            color: transparent; 
+            animation: gradient-animation 8s ease infinite;
+            transition: all 0.9s ease;
         }
 
+ @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 header h1 {
     font-size: 3.4rem; 
 }
@@ -89,10 +119,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #065a09;
-    text-decoration: none;
+   
     font-size: 2.34rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+transition: transform 1s ease, color 1s ease;
+    background: linear-gradient(45deg, #e24b0a, #e57118, #e58b1e, #fae154, #fdf7ff);
+            background-size: 400% 400%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+           
+            animation: gradient-animation 10s ease infinite, glowing-shadow 1.5s ease-in-out infinite alternate;
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
