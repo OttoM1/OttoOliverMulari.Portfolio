@@ -53,7 +53,6 @@ body {
     overflow-x: hidden;
     padding: 0 !important; 
         scroll-behavior: smooth;
-        height: 100%;
 
 
 }
@@ -65,7 +64,6 @@ p, li {
 }
 
 html, body {
-        height: 100%;
     overflow-x: hidden;
 
 
@@ -353,6 +351,8 @@ height: 60px;
 }
                 body { padding: 0 10px;
                          scroll-behavior: smooth;
+                      overscroll-behavior: contain;
+
 }
     p, li { font-size: 18px; }
     #projects a { font-size: 31.2px; color: rgb(227, 207, 255); }
@@ -372,6 +372,8 @@ header {
     
     body { overflow-x: hidden;
              scroll-behavior: smooth;
+          overscroll-behavior: contain;
+
 }
     p, li { font-size: 20.5px; font-weight: bold; }
     #contactForm { max-width: 90%; padding: 8px; }
