@@ -54,6 +54,8 @@ body {
     overflow-x: hidden;
     padding: 0 !important; 
         scroll-behavior: smooth;
+        height: 100%;
+
 
 }
 p, li {
@@ -63,7 +65,10 @@ p, li {
                  -2px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
+html, body {
+        height: 100%;
 
+}
 header {
     text-align: center;
     padding: 0rem 0; /*1.5rem 0.5rem */
@@ -310,7 +315,7 @@ html, body {
    
     section h2 {
         margin-top: 0px !important;
-        font-size: 4.85vh; }
+        font-size: 36px; }
 #contactForm input,
 #contactForm textarea {
     width: 300px;
@@ -349,7 +354,7 @@ height: 60px;
                          scroll-behavior: smooth;
 }
     p, li { font-size: 18px; }
-    #projects a { font-size: 24px; color: rgb(227, 207, 255); }
+    #projects a { font-size: 31.2px; color: rgb(227, 207, 255); }
 }
 
 
