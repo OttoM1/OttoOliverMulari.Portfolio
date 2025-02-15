@@ -208,7 +208,8 @@ transition: transform 0.25s ease-out, text-shadow 0.25s ease-in-out;
 
 #contactForm input::placeholder,
 #contactForm textarea::placeholder {
-  color: rgba(35, 5, 185, 0.58)
+  color: rgba(96, 3, 202, 0.843)
+
 }
 
 #kops a {
@@ -285,7 +286,7 @@ html, body {
         scroll-behavior: smooth;
 
 }
-
+/*
 .kuva-otto img {
     position: absolute !important; 
     top: -1150px !important; 
@@ -297,11 +298,16 @@ html, body {
     border-radius: 50% !important;
     opacity: 0.74;
     z-index: 1000 !important; 
-}
+} */
+
+    .kuva-otto img, .laptop-image {
+        visibility: hidden;
+        display: none;
+    } /*
     header {
         margin-top: 340px !important; 
     }
-   
+   */
     section h2 {
         margin-top: 0px !important;
         font-size: 4.85vh; }
@@ -365,6 +371,7 @@ header {
     color: white !important;
     
 }
+    /*
 .kuva-otto img {
     position: absolute !important; 
     top: -1150px !important; 
@@ -376,10 +383,14 @@ header {
     border-radius: 50% !important;
     opacity: 0.74 !important;
     z-index: 1000 !important; 
-}
+} */
+    .kuva-otto img, .laptop-image {
+        visibility: hidden;
+        display: none;
+    } /*
     header {
         margin-top: 340px !important; 
-    }
+    } */
 html, body {
         scroll-behavior: smooth;
 
