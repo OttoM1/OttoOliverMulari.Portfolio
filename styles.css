@@ -5,7 +5,7 @@
 }
 @media (min-width: 984px) and (max-width: 1940px) {
 #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps {
-    text-align: center !important;
+    text-align: center;
 }
 }
 
@@ -46,9 +46,7 @@ p, li {
                  -2px -2px 5px rgba(0, 0, 0, 0.123);
 }
 
-.kuva-otto img {
-    will-change: opacity, transform;
-}
+
 header {
     text-align: center;
     padding: 0rem 0; /*1.5rem 0.5rem */
@@ -145,14 +143,9 @@ section h2 {
     margin-top: 0px !important;
     font-size: 6vh;
     margin-bottom: 1.3rem;
-    background-image: linear-gradient(45deg, #3f31db, #9d0063, #d7ffff, #4348de, #fffdff);
-    background-size: 400% 400%;
-    color: transparent;
-    background-clip: text;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25), 
-                 -2px -2px 5px rgba(0, 0, 0, 0.25);
-    animation: gradient-animation 6s linear infinite, glowing-text 2s ease-in-out infinite alternate;
-    transition: transform 0.25s ease-out, text-shadow 0.25s ease-in-out;
+   font-weight: bold;
+    text-align: center;
+    color: #ffffff;
 }
 
 footer {
@@ -170,12 +163,8 @@ footer p {
     font-size: 0.9rem;
 }
 #contactHeading {
-    background-image: linear-gradient(45deg, #31dbd0, #313131, #d7ffff, #d6d6d6, #fffdff);
-    background-size: 400% 400%;
-    color: transparent;
-    background-clip: text;
-    animation: gradient-animation 6s linear infinite, glowing-text 2s ease-in-out infinite alternate;
-transition: transform 0.25s ease-out, text-shadow 0.25s ease-in-out;
+    color: rgb(97, 97, 97);
+
 
 }
 
@@ -233,12 +222,8 @@ transition: transform 0.25s ease-out, text-shadow 0.25s ease-in-out;
 }
 
 #contactForm button {
-    background: linear-gradient(45deg, #3498db, #9b59b6, #ff69b4, #ffffff) !important;
-    background-size: 400% 400% !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    color: transparent !important;
-    animation: gradient-animation 6s ease infinite, glowing-text 2s ease-in-out infinite alternate !important;
+    color: rgb(102, 92, 103);
+   background: none;
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
@@ -286,7 +271,7 @@ html, body {
         scroll-behavior: smooth;
 
 }
-/*
+
 .kuva-otto img {
     position: absolute !important; 
     top: -1150px !important; 
@@ -298,16 +283,14 @@ html, body {
     border-radius: 50% !important;
     opacity: 0.74;
     z-index: 1000 !important; 
-} */
+} 
 
-    .kuva-otto img, .laptop-image {
-        visibility: hidden;
-        display: none;
-    } /*
+    
+    } 
     header {
         margin-top: 340px !important; 
     }
-   */
+   
     section h2 {
         margin-top: 0px !important;
         font-size: 4.85vh; }
@@ -371,7 +354,7 @@ header {
     color: white !important;
     
 }
-    /*
+    
 .kuva-otto img {
     position: absolute !important; 
     top: -1150px !important; 
@@ -383,14 +366,10 @@ header {
     border-radius: 50% !important;
     opacity: 0.74 !important;
     z-index: 1000 !important; 
-} */
-    .kuva-otto img, .laptop-image {
-        visibility: hidden;
-        display: none;
-    } /*
+} 
     header {
         margin-top: 340px !important; 
-    } */
+    } 
 html, body {
         scroll-behavior: smooth;
 
