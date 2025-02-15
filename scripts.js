@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
+/*
     class Particle {
         constructor() {
             this.x = Math.random() * canvas.width;
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+*/
 
 
 
