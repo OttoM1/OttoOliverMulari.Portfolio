@@ -177,9 +177,10 @@ footer p {
     color: #ffd39b;
     font-size: 0.9rem;
 }
-#contactHeading {
+#contactHeading h2 {
     color: rgb(97, 97, 97);
 
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8);
 
 }
 
@@ -244,13 +245,14 @@ footer p {
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
-    padding: 30px;
-    width: 600px;
-    height: 200px;
-    margin-bottom: 90px !important;
-    border-radius: 24px;
+    
     transition: background 0.5s ease;
     border: 3px solid black;  
+    padding: 21px;
+    width: 240px;
+    height: 94px;
+    margin-bottom: 90px !important;
+    border-radius: 38px;
 
     box-shadow: 0 0 8px rgba(97, 220, 239, 0.6); 
 }
