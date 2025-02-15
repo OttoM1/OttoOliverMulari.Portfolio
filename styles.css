@@ -31,7 +31,7 @@
 
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent; /* Ensures transparency */
+    -webkit-text-fill-color: transparent; 
     animation: gradient-animation 8s ease infinite;
 }
 #kops a, #pops a {
@@ -52,7 +52,8 @@ body {
     /*padding: 0 20px; */
     overflow-x: hidden;
     padding: 0 !important; 
-        scroll-behavior: smooth;
+    min-height: 100vh;
+
 
 
 }
@@ -63,11 +64,6 @@ p, li {
                  -2px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-html, body {
-    overflow-x: hidden;
-
-
-}
 header {
     text-align: center;
     padding: 0rem 0; /*1.5rem 0.5rem */
@@ -351,7 +347,6 @@ height: 60px;
 }
                 body { padding: 0 10px;
                          scroll-behavior: smooth;
-                      overscroll-behavior: contain;
 
 }
     p, li { font-size: 18px; }
@@ -372,7 +367,6 @@ header {
     
     body { overflow-x: hidden;
              scroll-behavior: smooth;
-          overscroll-behavior: contain;
 
 }
     p, li { font-size: 20.5px; font-weight: bold; }
@@ -432,6 +426,8 @@ height: 60px;
     } 
 html, body {
         scroll-behavior: smooth;
+        min-height: 100vh;
+
 
 }
     
@@ -492,4 +488,3 @@ input:focus, textarea:focus {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     transform: scale(1.03);
 }
-
