@@ -19,7 +19,8 @@
             font-family: 'Times New Roman', Times, serif;
             line-height: 1.9;
             color: #ddd;
-            background-color: #000;
+                       background: radial-gradient(circle, #000000, #101010, #1c1c1e, #303030, #575757, #c1c1c1);
+
             padding: 0 20px;
             overflow-x: hidden;
         }
