@@ -7,7 +7,6 @@
 ::-webkit-scrollbar {
     display: none;
 }
-
 @media (min-width: 984px) and (max-width: 1940px) {
     #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps {
         text-align: center;
@@ -67,6 +66,8 @@ p, li {
 
 html, body {
         height: 100%;
+    overflow-x: hidden;
+
 
 }
 header {
