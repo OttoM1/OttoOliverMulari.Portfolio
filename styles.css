@@ -22,9 +22,20 @@
 
 
 }
+#nhaps {
+    background-image: linear-gradient(45deg, #710f28, #ecffae, #3c0b28, #d2ffe7);
+    background-size: 400% 400%;
+    color: transparent;
+    font-size: 2.65vh;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: gradient-animation 8s ease infinite;
+}
 
 #projects strong, #projects a{
-    background-image: linear-gradient(45deg, #6f25e5, #141ac5, #3c0b28, #d2ffe7);
+    background-image: linear-gradient(45deg, #710f28, #ecffae, #3c0b28, #d2ffe7);
     background-size: 400% 400%;
     color: transparent;
     font-size: 3.5vh;
@@ -208,7 +219,7 @@ footer p {
     outline: none;
     border-radius: 10px;
     transition: transform 0.8s ease;
-    font-size: 36px;
+    font-size: 28px;
     color: rgb(255, 237, 224);
 
 }
@@ -265,7 +276,7 @@ footer p {
 
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0.7; transform: translateY(0); }
 }
 
 
@@ -288,6 +299,22 @@ html, body {
 
 }
 
+.popup-content {
+    width: 95vw;
+      max-width: 100vw;
+    padding: 5vw;
+    }
+    
+      .popup-content h3 {
+      font-size: 30px;
+      }
+    
+      .popup-content p {
+        font-size: 20px; 
+    
+      }
+
+
 .kuva-otto img {
     position: absolute !important; 
     top: 50px !important; 
@@ -297,7 +324,7 @@ html, body {
     height: 350px !important; 
     animation: fadeIn 1.9s ease-in-out;
     border-radius: 50% !important;
-    opacity: 0.64;
+    opacity: 0.7;
 
     z-index: 1000 !important; 
 } 
@@ -373,6 +400,20 @@ header {
     #contactForm { max-width: 90%; padding: 8px; }
         
     
+.popup-content {
+    width: 95vw;
+      max-width: 100vw;
+    padding: 5vw;
+    }
+    
+      .popup-content h3 {
+      font-size: 29px;
+      }
+    
+      .popup-content p {
+        font-size: 18px; 
+    
+      }
 
 #contactForm input,
 #contactForm textarea {
@@ -417,7 +458,7 @@ height: 60px;
     height: 350px !important; 
     animation: fadeIn 1.9s ease-in-out;
     border-radius: 50% !important;
-    opacity: 0.64;
+    opacity: 0.7;
 
     z-index: 1000 !important; 
 } 
@@ -441,13 +482,13 @@ html, body {
     position: absolute; 
     right: 25px;
     width: 39vw;
-    top: 210%;
-    height: 61.5vh;
+    top: 110%;
+    height: 64.5vh;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 5px 2px 5px 6px rgba(0, 0, 0, 0.73);
+    box-shadow: 1px 6px 5px 6px rgba(54, 54, 54, 0.73);
     animation: fadeIn 1.9s ease-in-out;
-    opacity: 0.64;
+    opacity: 0.7;
 
 }
 
@@ -488,3 +529,51 @@ input:focus, textarea:focus {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     transform: scale(1.03);
 }
+
+
+.popup-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+background: rgba(0, 0, 0, 0.4);    
+      justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    }
+    
+    .popup-content {
+    background: rgba(26, 26, 26, 0.56);
+    padding: 2vw;
+    border-radius: 1vw; 
+    text-align: center;
+    width: 80vw; 
+    max-width: 32vw;
+    box-shadow: 0px 0.4vw 1vw rgba(0, 0, 0, 0);
+    font-size: 1.7vw;
+    }
+    
+    #successMessage .popup-content {
+        transition: transform 1s ease, color 1s ease;
+        color: rgba(255, 255, 255, 0.8);
+        background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
+                     -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
+        color: transparent;
+        animation: gradient-animation 6s ease infinite;
+        margin-bottom: 0px;
+    }
+    
+    #errorMessage .popup-content {
+    color: #caa29d;
+    }
+
+    .popup-content {
+        animation: fadeIn 3.4s ease-in-out;
+        }
+            
