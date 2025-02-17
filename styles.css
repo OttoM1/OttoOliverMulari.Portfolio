@@ -1,5 +1,16 @@
+@media screen and (min-width: 770px) {
+    * {
+        animation: initial !important;
+        transition: initial !important;
+    }
+}
 
-
+@media screen and (orientation: landscape) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
 * {
     margin: 0;
     padding: 0;
