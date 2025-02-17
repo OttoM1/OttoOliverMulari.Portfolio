@@ -70,6 +70,8 @@ body {
 }
 html, body {
         background: radial-gradient(circle, #000000, #101010, #101010, #0b0b0b, #141314, #000000, #150c19);
+        color: #000000;
+
 }
 p, li {
     color: #959595 !important;
