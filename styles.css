@@ -1,10 +1,11 @@
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 769px) {
     * {
-        animation: initial !important;
-        transition: initial !important;
-    }
-}
+        animation: unset !important;
+        transition: unset !important
 
+
+}
+}
 @media screen and (orientation: landscape) {
     * {
         animation: none !important;
