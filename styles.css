@@ -3,8 +3,304 @@
         animation: unset !important;
         transition: unset !important;
     }
+
+
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 0.87; transform: translateY(0); }
+}
+
+
+
+@keyframes glowing-shadow {
+    0% { text-shadow: 0 0 10px rgba(173, 216, 230, 0.3); }
+    50% { text-shadow: 0 0 20px rgba(173, 216, 230, 0.7); }
+    100% { text-shadow: 0 0 10px rgba(173, 216, 230, 0.3); }
+}
+
+
+#skills strong {
+    background-image: linear-gradient(45deg, #4af1e6, #c0f9b6, #ff0095, #82f9b9, #d8b7d8);
+    background-size: 400% 400%;
+    color: transparent;
+    background-clip: text;
+    animation: gradient-animation 8s ease infinite;
+
+
+}
+#nhaps {
+    background-image: linear-gradient(45deg, #710f28, #ecffae, #3c0b28, #d2ffe7);
+    background-size: 400% 400%;
+    color: transparent;
+    font-size: 2.65vh;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: gradient-animation 8s ease infinite;
+}
+
+#projects strong, #projects a{
+    background-image: linear-gradient(45deg, #710f28, #ecffae, #3c0b28, #d2ffe7);
+    background-size: 400% 400%;
+    color: transparent;
+    font-size: 3.5vh;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: gradient-animation 8s ease infinite;
+}
+#kops a, #pops a {
+    background-image: linear-gradient(45deg, #6f25e5, #141ac5, #ff0095, #d2ffe7);
+    background-size: 400% 400%;
+    color: transparent;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: gradient-animation 8s ease infinite;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.9;
+    color: #979797;
+    background: radial-gradient(circle, #000000, #101010, #101010, #0b0b0b, #141314, #000000, #150c19);
+    /*padding: 0 20px; */
+    overflow-x: hidden;
+    padding: 0 !important; 
+    min-height: 100vh;
+
+
+
+}
+html, body {
+        background: radial-gradient(circle, #000000, #101010, #101010, #0b0b0b, #141314, #000000, #150c19);
+        color: #000000;
+
+}
+p, li {
+    color: #959595 !important;
+    font-size: 3.44vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 
+                 -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding: 0rem 0; /*1.5rem 0.5rem */
+    margin-top: 0 !important;
+    animation: fadeIn 1.2s ease-out;
+    background: linear-gradient(70deg, #909090, #94948b, #90b8b5, #4b5254, #82b6c6, #c4ecf9);
+    background-clip: text;
+    color: transparent;
+    animation: gradient-animation 8s ease infinite;
+    transition: all 0.9s ease;
+}
+header h1 {
+    margin: 0 !important;
+}
+header p {
+    background: linear-gradient(70deg, #7373ed, #575ae1, #3d2748, #5e8bc2, #82b6c6, #c4ecf9);
+    background-clip: text;
+    color: transparent;
+    animation: gradient-animation 8s ease infinite;
+    transition: all 0.9s ease;
+    margin-bottom: 28px !important;
+}
+
+header h1 {
+    font-size: 7.2vh; 
+}
+
+header p {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    font-size: 2.34rem;
+    transition: transform 1s ease, color 1s ease;
+    color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
+                 -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
+    color: transparent;
+    animation: gradient-animation 6s ease infinite;
+    margin-bottom: 0px !important;
+}
+
+nav ul li a:hover {
+    transform: scale(1.6);
+    color: #FFFFFF;
+}
+
+section {
+    padding: 2.6rem;
+    margin: 1.3rem 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 0.9;
+    transform: translateY(0);
+}
+
+section h2 {
+    margin-top: 0px !important;
+    font-size: 6vh;
+    margin-bottom: 1.3rem;
+   font-weight: bold;
+    text-align: center;
+    transition: transform 1s ease, color 1s ease;
+    color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
+                 -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
+    color: transparent;
+    animation: gradient-animation 6s ease infinite;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #ffd39b;
+    font-size: 0.9rem;
+}
+#contactHeading h2 {
+    color: rgb(97, 97, 97);
+
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8);
+
+}
+
+#contactForm {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    background: none;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 600px;
+    height: 78px;
+    margin: 0.7rem 0;
+   background: none;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: transform 0.8s ease;
+    font-size: 28px;
+    color: rgb(255, 237, 224);
+
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: rgba(71, 71, 71, 0.843)
+
+}
+
+#kops a {
+    background: linear-gradient(45deg, #3498db, #9b59b6, #ff69b4, #ffffff) !important;
+    background-size: 400% 400% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    animation: gradient-animation 6s ease infinite, glowing-text 2s ease-in-out infinite alternate !important;
+
+}
+
+#pops a {
+
+    background: linear-gradient(45deg, #3498db, #9b59b6, #ff69b4, #ffffff) !important;
+    background-size: 400% 400% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    animation: gradient-animation 6s ease infinite, glowing-text 2s ease-in-out infinite alternate !important;
+}
+
+#contactForm button {
+    color: rgb(102, 92, 103);
+   background: none;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    transition: background 0.5s ease;
+    border: 3px solid black;  
+    padding: 21px;
+    width: 240px;
+    height: 94px;
+    margin-bottom: 90px !important;
+    border-radius: 38px;
+
+    box-shadow: 0 0 8px rgba(97, 220, 239, 0.6); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   
+}
+
+/*tääälläääääää*/
 @media screen and (orientation: landscape) {
     * {
         transition: none;
