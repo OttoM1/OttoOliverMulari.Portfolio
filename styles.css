@@ -1,14 +1,15 @@
 @media screen and (min-width: 769px) {
     * {
         animation: unset !important;
-        transition: unset !important
-
-
+        transition: unset !important;
+    }
 }
-}
+
 @media screen and (orientation: landscape) {
     * {
-        transition: none !important;
+        transition: none;
+               animation: none;
+
     }
 }
 * {
