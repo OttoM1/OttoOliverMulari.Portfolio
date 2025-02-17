@@ -31,7 +31,7 @@
     background-size: 400% 400%;
     color: transparent;
     background-clip: text;
-    animation: gradient-animation 8s ease infinite;
+    animation: gradient-animation 8s ease infinite !important;
 
 
 }
@@ -44,7 +44,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent; 
-    animation: gradient-animation 8s ease infinite;
+    animation: gradient-animation 8s ease infinite !important;
 }
 
 #projects strong, #projects a{
@@ -56,7 +56,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent; 
-    animation: gradient-animation 8s ease infinite;
+    animation: gradient-animation 8s ease infinite !important;
 }
 #kops a, #pops a {
     background-image: linear-gradient(45deg, #6f25e5, #141ac5, #ff0095, #d2ffe7);
@@ -66,7 +66,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent; 
-    animation: gradient-animation 8s ease infinite;
+    animation: gradient-animation 8s ease infinite !important;
 }
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -101,8 +101,8 @@ header {
     background: linear-gradient(70deg, #909090, #94948b, #90b8b5, #4b5254, #82b6c6, #c4ecf9);
     background-clip: text;
     color: transparent;
-    animation: gradient-animation 8s ease infinite;
-    transition: all 0.9s ease;
+    animation: gradient-animation 8s ease infinite !important;
+    transition: all 0.9s ease !important;
 }
 header h1 {
     margin: 0 !important;
@@ -111,8 +111,8 @@ header p {
     background: linear-gradient(70deg, #7373ed, #575ae1, #3d2748, #5e8bc2, #82b6c6, #c4ecf9);
     background-clip: text;
     color: transparent;
-    animation: gradient-animation 8s ease infinite;
-    transition: all 0.9s ease;
+    animation: gradient-animation 8s ease infinite !important;
+    transition: all 0.9s ease !important;
     margin-bottom: 28px !important;
 }
 
@@ -140,7 +140,7 @@ nav ul li {
 
 nav ul li a {
     font-size: 2.34rem;
-    transition: transform 1s ease, color 1s ease;
+    transition: transform 1s ease, color 1s ease !important;
     color: rgba(255, 255, 255, 0.8);
     background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
     background-size: 200% 200%;
@@ -149,7 +149,7 @@ nav ul li a {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
                  -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
     color: transparent;
-    animation: gradient-animation 6s ease infinite;
+    animation: gradient-animation 6s ease infinite !important;
     margin-bottom: 0px !important;
 }
 
@@ -166,7 +166,7 @@ section {
     border-radius: 8px;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out !important;
 }
 
 section.visible {
@@ -189,7 +189,7 @@ section h2 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
                  -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
     color: transparent;
-    animation: gradient-animation 6s ease infinite;
+    animation: gradient-animation 6s ease infinite !important;
 }
 
 footer {
@@ -275,7 +275,7 @@ footer p {
     font-weight: bold;
     cursor: pointer;
     
-    transition: background 0.5s ease;
+    transition: background 0.5s ease !important;
     border: 3px solid black;  
     padding: 21px;
     width: 240px;
