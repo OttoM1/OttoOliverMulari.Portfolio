@@ -307,6 +307,14 @@ footer p {
                animation: none;
 
     }
+   html, body {
+        background: radial-gradient(circle, #000000, #101010, #101010, #0b0b0b, #141314, #000000, #150c19) !important;
+
+}
+   body {
+              background: radial-gradient(circle, #000000, #101010, #101010, #0b0b0b, #141314, #000000, #150c19) !important;
+
+   }
 }
 * {
     margin: 0;
