@@ -1,20 +1,4 @@
-@media (max-width: 430px) {
-.linkedin-browser h1, 
-.linkedin-browser p, 
-.linkedin-browser li, 
-.linkedin-browser nav ul li a {
-    transform: none !important; 
-    text-shadow: none !important;
-    transition: none !important; 
-}
 
-.linkedin-browser {
-    text-size-adjust: 100% !important;
-    -webkit-text-size-adjust: 100% !important;
-    font-size: 100% !important;
-    zoom: 1 !important;
-}
-}
 
 
 
@@ -340,7 +324,7 @@ footer p {
 
    }
     header {
-    font-size: 9vh;
+    font-size: 7vh;
 }
 * {
     margin: 0;
