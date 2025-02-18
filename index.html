@@ -244,7 +244,22 @@
  });
 })(); 
 </script>
-    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (userAgent.includes("LinkedIn")) {
+        document.body.classList.add("linkedin-browser");
+    }
+
+    if (userAgent.includes("FBAN") || userAgent.includes("FBAV")) {
+        document.body.classList.add("facebook-browser");
+    }
+    if (userAgent.includes("Twitter")) {
+        document.body.classList.add("twitter-browser");
+    }
+});
+</script>
 </head>
 <body>
   
