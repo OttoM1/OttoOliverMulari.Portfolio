@@ -244,6 +244,23 @@
  });
 })(); 
 </script>
+    <script>
+(function() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (userAgent.includes("LinkedIn")) {
+        var url = window.location.href.replace("https://", "").replace("http://", "");
+
+       
+        if (/iPhone|iPad|iPod/i.test(userAgent)) {
+            window.location.href = "ios-redirect://" + url; 
+        } 
+        else if (/android/i.test(userAgent)) {
+            window.location.href = "googlechrome://" + url;
+        }
+    }
+})();
+</script>
 </head>
 <body>
   
