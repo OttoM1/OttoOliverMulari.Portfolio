@@ -154,7 +154,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    transform: scale(1.6);
+    transform: scale(1.04);
     color: #FFFFFF;
 }
 
@@ -167,6 +167,7 @@ section {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out !important;
+   will-change: transform, opacity;
 }
 
 section.visible {
@@ -197,8 +198,10 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
+   /* position: fixed;
+    bottom: 0; */
+   position: relative;
+   bottom: auto;
     width: 100%;
 }
 
@@ -459,7 +462,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    transform: scale(1.6);
+    transform: scale(1.04);
     color: #FFFFFF;
 }
 
@@ -470,6 +473,7 @@ section {
     color: white;
     border-radius: 8px;
     opacity: 0;
+   will-change: transform, opacity !important;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
@@ -502,9 +506,11 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
     width: 100%;
+   position: relative;
+    bottom: auto;
 }
 
 footer p {
