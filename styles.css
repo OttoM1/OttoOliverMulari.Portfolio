@@ -181,7 +181,7 @@ section h2 {
     margin-bottom: 1.3rem;
    font-weight: bold;
     text-align: center;
-    transition: transform 1s ease, color 1s ease;
+    transition: transform 1.9s ease, color 1s ease;
     color: rgba(255, 255, 255, 0.8);
     background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
     background-size: 200% 200%;
@@ -199,7 +199,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
     position: fixed;
-    bottom: 0; 
+    bottom: 0px; 
     width: 100%;
 }
 
@@ -446,7 +446,7 @@ nav ul li {
 
 nav ul li a {
     font-size: 2.34rem;
-    transition: transform 1s ease, color 1s ease;
+    transition: transform 1.55s ease, color 1.55s ease;
     color: rgba(255, 255, 255, 0.8);
     background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
     background-size: 200% 200%;
@@ -473,7 +473,7 @@ section {
     opacity: 0;
    will-change: transform, opacity !important;
     transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
 section.visible {
@@ -487,7 +487,7 @@ section h2 {
     margin-bottom: 1.3rem;
    font-weight: bold;
     text-align: center;
-    transition: transform 1.4s ease, color 1.4s ease;
+    transition: transform 1.9s ease, color 1.9s ease;
     color: rgba(255, 255, 255, 0.8);
     background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
     background-size: 200% 200%;
@@ -506,7 +506,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
      position: fixed; 
-     bottom: 0; 
+     bottom: 0px; 
     width: 100%;
 }
 
