@@ -24,7 +24,9 @@
         animation: unset !important;
         transition: unset !important;
     }
-
+header {
+    font-size: 7vh;
+}
 
 
 @keyframes gradient-animation {
@@ -337,6 +339,8 @@ footer p {
            background: radial-gradient(circle, #000000, #101010, #101010, #0b0b0b, #141314, #000000, #150c19) !important;
 
    }
+    header {
+    font-size: 7vh;
 }
 * {
     margin: 0;
