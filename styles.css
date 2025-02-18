@@ -489,12 +489,13 @@ section h2 {
     margin-bottom: 1.3rem;
    font-weight: bold;
     text-align: center;
-    transition: transform 1s ease, color 1s ease;
+    transition: transform 1.4s ease, color 1.4s ease;
     color: rgba(255, 255, 255, 0.8);
     background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
+     will-change: transform, opacity;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
                  -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
     color: transparent;
