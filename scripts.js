@@ -283,7 +283,7 @@ document.getElementById("poks").addEventListener("click", function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const fadeElements = document.querySelectorAll(".fade-in, .kuva-otto img"); 
-
+/*
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeElements.forEach(el => observer.observe(el)); 
 });
 
-
+*/
 
 
 
