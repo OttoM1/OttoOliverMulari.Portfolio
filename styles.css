@@ -1,6 +1,6 @@
 
-#nhaps {
-  text-decoration: underline;
+#nhaps a{
+  text-decoration: underline !important;
 }
 @media (max-width: 430px) { .linkedin-browser h1, .linkedin-browser p, .linkedin-browser li, .linkedin-browser nav ul li a { transform: none !important; text-shadow: none !important; transition: none !important; } .linkedin-browser { text-size-adjust: 100% !important; -webkit-text-size-adjust: 100% !important; font-size: 100% !important; zoom: 1 !important; } }
 
@@ -45,7 +45,7 @@ header {
 
 
 }
-#nhaps {
+#nhaps a{
     background-image: linear-gradient(45deg, #710f28, #ecffae, #3c0b28, #d2ffe7);
     background-size: 400% 400%;
     color: transparent;
@@ -353,7 +353,7 @@ footer p {
 
 
 }
-#nhaps {
+#nhaps a{
     background-image: linear-gradient(45deg, #710f28, #ecffae, #3c0b28, #d2ffe7);
     background-size: 400% 400%;
     color: transparent;
