@@ -341,9 +341,12 @@ footer p {
     display: none;
 }
 @media (min-width: 984px) and (max-width: 1940px) {
-    #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps {
+    #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps a{
         text-align: center;
     }
+  #nhaps a{
+  text-decoration: underline !important;
+}
     }
 
 #skills strong {
