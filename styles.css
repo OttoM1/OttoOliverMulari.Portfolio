@@ -339,9 +339,6 @@ footer p {
     #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps a{
         text-align: center;
     }
-  #nhaps a{
-  text-decoration: underline !important;
-}
     }
 
 #skills strong {
@@ -358,7 +355,6 @@ footer p {
     background-size: 400% 400%;
     color: transparent;
     font-size: 2.65vh;
-  text-decoration: underline !important;
 
     -webkit-background-clip: text;
     background-clip: text;
