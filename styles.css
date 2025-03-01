@@ -1,6 +1,7 @@
 
 .webview-mode {
     scroll-behavior: auto !important; 
+    transform: none !important;
 }
 
 .webview-mode .hover-effect, 
