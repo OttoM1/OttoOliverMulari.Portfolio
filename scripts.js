@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isStoryMode = false;
     let storyTimeout;
 
-    const storyModeButton = document.createElement('button');
+    const storyModeButton = document.createElement('button'); 
     storyModeButton.textContent = 'Story Mode';
     storyModeButton.id = 'storyModeToggle'; 
     Object.assign(storyModeButton.style, { 
