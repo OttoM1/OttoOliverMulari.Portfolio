@@ -343,3 +343,16 @@ function showPopup(id) {
     });
 }
 
+
+
+
+
+
+function isWebView() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    return /FBAN|FBAV|Instagram|Twitter|LinkedIn|FB_IAB|FB4A|FBAN|FBIOS/i.test(userAgent);
+}
+
+if (isWebView()) {
+    document.body.classList.add("webview-mode"); 
+}
