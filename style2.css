@@ -1,0 +1,159 @@
+body {
+    width: 100vw;
+    min-height: 100vh; /* Allows scrolling beyond viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 15, 15);
+    font-family: Arial, sans-serif; /* Clean and readable font */
+    line-height: 1.8; /* Improves text readability */
+    padding: 30px; /* Adds spacing around content */
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 4vh;
+}
+p {
+    font-size: 2.8vh;
+    line-height: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+
+}
+h1 {
+    font-size: 6.3vh;
+    line-height: auto;
+font-family: italy;
+}
+strong {
+    font-size: 4.4vh;
+    font-weight: 600;
+    font-family: italy;
+
+}
+#a {
+    font-size: 2.4vh;
+    font-weight: lighter;
+    font-family: italy;
+
+}
+::-webkit-scrollbar {
+    visibility: hidden;
+    display: none;
+}
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Styling for the essay text */
+.essay-container {
+    max-width: 800px; /* Keeps text readable, not too wide */
+    margin: 0 auto; /* Centers the content */
+    font-size: 22px; /* Larger font for readability */
+    padding-bottom: 50px; /* Adds space at the bottom */
+}
+
+/* Ensures scrolling works beyond 100vh */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(88, 143, 137);
+    font-size: 1.8vh;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0px; 
+    width: 100%;
+  }
+
+  #jj {
+    margin-top: 4vh;
+    padding-bottom: 8vh;
+    width: 10vw;
+    height: 8vh;
+    font-size: 3.2vh;
+    will-change: transform;
+    border-radius: 4px;
+    background: #7b7b7b;
+    color: aliceblue;
+  }
+  #jj:hover {
+    background: blue;
+}
+  
+
+  #tog {
+    position: absolute;
+    top: 2vh;
+    right: 1vw;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+@media (max-width: 469px) {
+    footer {
+display: none;
+visibility: hidden;
+
+    }
+html, body {
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+
+}
+body {
+    overscroll-behavior: contain;
+
+}
+#jj {
+   background: none !important;
+    font-size: 2.4vh;
+    color: #376557;
+    box-shadow: none;
+    border-radius: none;
+    border-radius: 0;
+    border: 0;
+
+}
+h1 {
+    font-size: 5.6vh;
+
+}
+}
+@media (max-width: 990px) and (orientation: landscape) {
+    h1 {
+        margin-top: 10vh;
+        padding-top: 12vh;
+        font-size: 9vh;
+    }
+    footer {
+        visibility: hidden;
+        display: none;
+    }
+    strong {
+        font-size: 7.2vh !important;
+    }
+
+#jj {
+    background: none !important;
+     font-size: 4.4vh;
+     color: #376557;
+     box-shadow: none;
+     border-radius: none;
+     border-radius: 0;
+     border: 0;
+ 
+ }
+}
