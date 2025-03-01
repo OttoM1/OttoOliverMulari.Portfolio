@@ -1,12 +1,12 @@
 body {
     width: 100vw;
-    min-height: 100vh; /* Allows scrolling beyond viewport height */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    min-height: 100vh; 
+    overflow-x: hidden; 
     background-color: rgb(255, 255, 255);
     color: rgb(15, 15, 15);
-    font-family: Arial, sans-serif; /* Clean and readable font */
-    line-height: 1.8; /* Improves text readability */
-    padding: 30px; /* Adds spacing around content */
+    font-family: Arial, sans-serif; 
+    line-height: 1.8; 
+    padding: 30px; 
     padding-left: 4vw;
     padding-right: 4vw;
     padding-top: 4vh;
@@ -35,15 +35,15 @@ strong {
     visibility: hidden;
     display: none;
 }
-/* Reset margins and paddings */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box; 
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth; 
 
 }
 
